@@ -1,0 +1,6 @@
+  signal RQ_data0:std_logic_vector(15 downto 0);
+  signal RQ_data1:std_logic_vector(15 downto 0);
+  signal RQ_data2:std_logic_vector(15 downto 0);
+  signal RQ_data3:std_logic_vector(15 downto 0);
+  signal RQ_data4:std_logic_vector(15 downto 0);
+  signal RQ_valid:std_logic_vector(15 downto 0);

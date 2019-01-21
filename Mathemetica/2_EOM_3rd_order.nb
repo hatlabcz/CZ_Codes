@@ -1,0 +1,931 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     31846,        923]
+NotebookOptionsPosition[     29590,        868]
+NotebookOutlinePosition[     30084,        888]
+CellTagsIndexPosition[     30041,        885]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Adding forth order terms", "Section",
+ CellChangeTimes->{{3.6851816216435432`*^9, 3.6851816344832773`*^9}, {
+  3.6851835763483458`*^9, 3.685183580373576*^9}, {3.6869945436814804`*^9, 
+  3.686994554481098*^9}, {3.687604397098553*^9, 3.6876043994636884`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Scattering Matrix", "Subsection",
+ CellChangeTimes->{{3.6876073742818384`*^9, 3.687607379953163*^9}}],
+
+Cell["Hamiltonian with forth order terms is the following", "Text",
+ CellChangeTimes->{{3.6851842302247453`*^9, 3.685184234901013*^9}, {
+  3.6851865946999855`*^9, 3.6851866266208115`*^9}, {3.6876044194478316`*^9, 
+  3.687604452047696*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   SubscriptBox["H", "0"], "\[HBar]"], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["\[Omega]", "a"], 
+    SuperscriptBox["a", "\[Dagger]"], "a"}], "+", 
+   RowBox[{
+    SubscriptBox["\[Omega]", "b"], 
+    SuperscriptBox["b", "\[Dagger]"], "b"}], "+", 
+   RowBox[{
+    SubscriptBox["\[Omega]", "c"], 
+    SuperscriptBox["c", "\[Dagger]"], "c"}], "+", 
+   RowBox[{
+    SubscriptBox["g", "3"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["a", "\[Dagger]"], 
+       SuperscriptBox["b", "\[Dagger]"], "c"}], "+", 
+      SuperscriptBox["abc", "\[Dagger]"]}], ")"}]}]}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.6876044565829554`*^9, 3.6876046673120084`*^9}, 
+   3.687604727329441*^9, {3.6876225050412683`*^9, 3.687622518568042*^9}, 
+   3.6888323216837397`*^9, {3.6924685833736205`*^9, 3.692468820150163*^9}, {
+   3.6980035280123096`*^9, 3.698003569785699*^9}, {3.6980036550815773`*^9, 
+   3.6980036710194893`*^9}, 3.6980037084956326`*^9, {3.698004168144923*^9, 
+   3.698004172601178*^9}, {3.7371951300077586`*^9, 3.737195147718772*^9}},
+ FontFamily->"Arial",
+ FontColor->RGBColor[
+  1., 0., 0.],ExpressionUUID->"7db883c0-9af4-4acf-bfc1-960b4b2e9f7a"],
+
+Cell["Thus, we can reach equation of motion for each operator", "Text",
+ CellChangeTimes->{{3.6876047316866903`*^9, 3.687604753665948*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   FractionBox["da", "dt"], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "\[ImaginaryI]"}], " ", 
+     SubscriptBox["\[Omega]", "a"], "a"}], "-", 
+    RowBox[{
+     FractionBox[
+      SubscriptBox["\[Kappa]", "a"], "2"], "a"}], "-", 
+    RowBox[{
+     SubscriptBox["ig", "3"], 
+     SuperscriptBox["b", "\[Dagger]"], "c"}], "+", 
+    RowBox[{
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "a"]], 
+     SuperscriptBox["a", "in"], " "}]}]}],
+  FontFamily->"Arial Narrow",
+  FontColor->RGBColor[1, 0, 0]]], "DisplayFormulaNumbered",
+ CellChangeTimes->{
+  3.685184246951702*^9, {3.6876047775773153`*^9, 3.6876047921761503`*^9}, {
+   3.6876225247703967`*^9, 3.6876225407123084`*^9}, {3.692468851109934*^9, 
+   3.6924688991986847`*^9}, {3.6932225394476295`*^9, 3.693222618847171*^9}, {
+   3.698003784575984*^9, 3.698003807434292*^9}, {3.6980038982754874`*^9, 
+   3.6980039052278852`*^9}, {3.6980039700435925`*^9, 3.698004027233863*^9}, {
+   3.698004179923597*^9, 3.6980041830667763`*^9}, {3.737195154384153*^9, 
+   3.7371951563832674`*^9}},
+ FontFamily->"Courier New",
+ FontColor->RGBColor[
+  1., 0., 0.],ExpressionUUID->"35c9b3f4-35bf-4c11-919c-5d2a81b394f4"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   StyleBox[
+    FractionBox["db", "dt"],
+    FontFamily->"Arial Narrow"], 
+   StyleBox["=",
+    FontFamily->"Arial Narrow"], 
+   RowBox[{
+    StyleBox[
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", 
+      SubscriptBox["\[Omega]", "b"], "b"}],
+     FontFamily->"Arial Narrow"], 
+    StyleBox["-",
+     FontFamily->"Arial Narrow"], 
+    StyleBox[
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\[Kappa]", "b"], "2"], "b"}],
+     FontFamily->"Arial Narrow"], 
+    StyleBox["-",
+     FontFamily->"Arial Narrow"], 
+    StyleBox[
+     RowBox[{
+      SubscriptBox["ig", "3"], 
+      SuperscriptBox["a", "\[Dagger]"], "c"}],
+     FontFamily->"Arial Narrow"], 
+    StyleBox["+",
+     FontFamily->"Arial Narrow"], 
+    RowBox[{
+     StyleBox[
+      SqrtBox[
+       SubscriptBox["\[Kappa]", "b"]],
+      FontFamily->"Arial Narrow"], 
+     StyleBox[
+      SuperscriptBox["b", "in"],
+      FontFamily->"Arial Narrow"], " "}]}]}],
+  FontColor->RGBColor[1, 0, 0]]], "DisplayFormulaNumbered",
+ CellChangeTimes->{
+  3.6851842566392565`*^9, {3.6876048016656933`*^9, 3.6876048504084806`*^9}, {
+   3.687622546184622*^9, 3.687622558689337*^9}, {3.692468906550105*^9, 
+   3.692469017079427*^9}, {3.6932226310398684`*^9, 3.6932226780735583`*^9}, 
+   3.696433151196455*^9, {3.6980044488879805`*^9, 3.698004467441042*^9}, {
+   3.7371951633676667`*^9, 3.737195165191771*^9}},
+ FontFamily->"Courier New",
+ FontColor->RGBColor[
+  1., 0., 0.],ExpressionUUID->"21983de1-ff22-47e6-b5ec-c6cbf2ee6ed1"],
+
+Cell["Now we perform F.T. and SPA on Equ (1) and (2)", "Text",
+ CellChangeTimes->{
+  3.6851842978366127`*^9, {3.6851843397640104`*^9, 3.6851844304771996`*^9}, {
+   3.686926246806123*^9, 3.6869262694974203`*^9}, 3.686926308437648*^9, 
+   3.68692800979996*^9, 3.6869946113053484`*^9, {3.6876049538653984`*^9, 
+   3.687604978575812*^9}, {3.687605594433037*^9, 3.68760560164845*^9}, {
+   3.6900568537099724`*^9, 3.6900568623664675`*^9}, {3.6900568997426057`*^9, 
+   3.6900569565628557`*^9}, {3.690062761566883*^9, 3.690062761782895*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  StyleBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "\[ImaginaryI]"}], " ", 
+     RowBox[{"(", "\[Omega]1", ")"}], " ", "a"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", 
+      SubscriptBox["\[Omega]", "a"], "a"}], "-", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\[Kappa]", "a"], "2"], "a"}], "-", 
+     RowBox[{
+      SubscriptBox["ig", "3"], 
+      SuperscriptBox["b", "\[Dagger]"], "c"}], "+", 
+     RowBox[{
+      SqrtBox[
+       SubscriptBox["\[Kappa]", "a"]], 
+      SuperscriptBox["a", "in"]}]}]}],
+   FontFamily->"Arial Narrow",
+   FontColor->RGBColor[1, 0, 0]], 
+  StyleBox[" ",
+   FontFamily->"Arial Narrow",
+   FontColor->RGBColor[1, 0, 0]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  StyleBox[
+   RowBox[{"-", 
+    RowBox[{"\[ImaginaryI]", " ", 
+     RowBox[{"(", "\[Omega]2", ")"}], " ", "b"}]}],
+   FontFamily->"Arial Narrow",
+   FontColor->RGBColor[1, 0, 0]], 
+  StyleBox["=",
+   FontFamily->"Arial Narrow",
+   FontColor->RGBColor[1, 0, 0]], 
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     RowBox[{"-", "\[ImaginaryI]"}], " ", 
+     SubscriptBox["\[Omega]", "b"], "b"}],
+    FontFamily->"Arial Narrow"], 
+   StyleBox["-",
+    FontFamily->"Arial Narrow"], 
+   StyleBox[
+    RowBox[{
+     FractionBox[
+      SubscriptBox["\[Kappa]", "b"], "2"], "b"}],
+    FontFamily->"Arial Narrow"], 
+   StyleBox["-",
+    FontFamily->"Arial Narrow"], 
+   StyleBox[
+    RowBox[{
+     SubscriptBox["ig", "3"], 
+     SuperscriptBox["a", "\[Dagger]"], "c"}],
+    FontFamily->"Arial Narrow"], 
+   StyleBox["+",
+    FontFamily->"Arial Narrow"], 
+   RowBox[{
+    StyleBox[
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "b"]],
+     FontFamily->"Arial Narrow"], 
+    StyleBox[
+     SuperscriptBox["b", "in"],
+     FontFamily->"Arial Narrow"], " ", 
+    StyleBox[" ",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]]}]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.6869949569101157`*^9, 3.6869950501134467`*^9}, {
+   3.6869950850734463`*^9, 3.6869950870015564`*^9}, {3.686995117817319*^9, 
+   3.686995144354837*^9}, {3.686995178817808*^9, 3.6869952311898036`*^9}, {
+   3.6869955394174333`*^9, 3.686995677186313*^9}, {3.687604985441204*^9, 
+   3.6876050499768953`*^9}, {3.687605590570816*^9, 3.687605632762229*^9}, {
+   3.687622577552416*^9, 3.687622603559903*^9}, {3.6877220030300465`*^9, 
+   3.68772200518217*^9}, 3.6877846647790937`*^9, {3.6878116239070673`*^9, 
+   3.6878116466113663`*^9}, {3.6900569700636272`*^9, 
+   3.6900570017264385`*^9}, {3.690062765224092*^9, 3.690062766952191*^9}, {
+   3.6924690477401805`*^9, 3.6924690954889116`*^9}, {3.693222700202824*^9, 
+   3.693222705256113*^9}, 3.6964331567487726`*^9, {3.6980045059752455`*^9, 
+   3.698004513134655*^9}, {3.7371951718251505`*^9, 3.737195179143569*^9}},
+ FontFamily->"Arial Narrow",
+ FontColor->RGBColor[
+  1., 0., 0.],ExpressionUUID->"3604f751-7bb6-4577-b406-bce6ce6d83b7"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"[", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\[Kappa]", "a"], "2"], 
+      RowBox[{"-", 
+       RowBox[{"\[ImaginaryI]", 
+        RowBox[{"(", " ", 
+         RowBox[{"\[Omega]1", 
+          RowBox[{"-", 
+           SubscriptBox["\[Omega]", "a"]}]}], ")"}]}]}]}], " ", "]"}], "a"}], 
+   "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      SubscriptBox["ig", "3"]}], 
+     RowBox[{"\[LeftAngleBracket]", "c", "\[RightAngleBracket]"}], 
+     SuperscriptBox["b", "\[Dagger]"]}], "+", 
+    RowBox[{
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "a"]], 
+     SuperscriptBox["a", "in"]}]}]}],
+  FontFamily->"Arial Narrow",
+  FontColor->RGBColor[1, 0, 0]]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.687605659849778*^9, 3.687605672059477*^9}, {
+   3.6876057021952004`*^9, 3.687605745578682*^9}, {3.6876057824347897`*^9, 
+   3.6876057844099026`*^9}, {3.6876058183468437`*^9, 3.6876058263213*^9}, 
+   3.687605916921482*^9, {3.687622674544963*^9, 3.6876226836064816`*^9}, 
+   3.687722006375238*^9, 3.6888323315333033`*^9, {3.690057021519571*^9, 
+   3.690057026670865*^9}, {3.6900627731845474`*^9, 3.690062780422961*^9}, 
+   3.690062812119774*^9, {3.6900703623116207`*^9, 3.6900703635996943`*^9}, {
+   3.692469131398966*^9, 3.6924692136396694`*^9}, {3.692469244486434*^9, 
+   3.6924692445654383`*^9}, {3.693222760482272*^9, 3.693222776024161*^9}, 
+   3.6932228159934473`*^9, {3.6980046782801013`*^9, 3.698004692280902*^9}, 
+   3.73719519069723*^9},
+ FontFamily->"Arial Narrow",
+ FontColor->RGBColor[
+  1., 0., 0.],ExpressionUUID->"4a383908-4c26-4ba1-a494-2fa7a375342d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["[",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]], 
+    RowBox[{
+     StyleBox[
+      FractionBox[
+       SubscriptBox["\[Kappa]", "b"], "2"],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     RowBox[{
+      StyleBox["-",
+       FontFamily->"Arial Narrow",
+       FontColor->RGBColor[1, 0, 0]], 
+      RowBox[{
+       StyleBox["\[ImaginaryI]",
+        FontFamily->"Arial Narrow",
+        FontColor->RGBColor[1, 0, 0]], 
+       RowBox[{
+        StyleBox["(",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[" ",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        RowBox[{"\[Omega]2", "-", 
+         SubscriptBox["\[Omega]", "b"]}], 
+        StyleBox[" ",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[")",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]]}]}]}]}], 
+    StyleBox["]",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]]}], 
+   StyleBox["b",
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]]}], 
+  StyleBox["=",
+   FontFamily->"Arial Narrow",
+   FontColor->RGBColor[1, 0, 0]], 
+  RowBox[{
+   RowBox[{
+    StyleBox[
+     RowBox[{"-", 
+      SubscriptBox["ig", "3"]}],
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]], 
+    StyleBox[
+     RowBox[{"\[LeftAngleBracket]", "c", "\[RightAngleBracket]"}],
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]], 
+    SuperscriptBox["a", "\[Dagger]"]}], 
+   StyleBox["+",
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]], 
+   RowBox[{
+    StyleBox[
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "b"]],
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]], 
+    SuperscriptBox["b", "in"]}]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.687605785793982*^9, 3.687605831281584*^9}, 
+   3.687605919993658*^9, {3.6876226874647026`*^9, 3.687622694890127*^9}, {
+   3.6876227431058846`*^9, 3.6876227556896043`*^9}, 3.6877220078863244`*^9, 
+   3.688832334773488*^9, {3.6900570305350866`*^9, 3.690057036263414*^9}, {
+   3.690062787168347*^9, 3.69006279474378*^9}, {3.690070368055949*^9, 
+   3.690070369911055*^9}, {3.6924692240792665`*^9, 3.692469252422888*^9}, {
+   3.69322278440164*^9, 3.693222817952559*^9}, 3.6964331617270575`*^9, {
+   3.698004701027402*^9, 3.698004714731186*^9}, 3.73719519735161*^9},
+ FontFamily->"Arial",
+ FontColor->RGBColor[
+  1., 0., 0.],ExpressionUUID->"092fb653-e169-4788-86c9-a84f7310ae3a"],
+
+Cell[TextData[{
+ "Using Input-Output Theory and also ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["b", "in"], TraditionalForm]]],
+ " = 0"
+}], "Text",
+ CellChangeTimes->{{3.6876236375350432`*^9, 3.687623650391779*^9}, {
+  3.68762412229677*^9, 3.6876241326323614`*^9}, {3.6876910875657835`*^9, 
+  3.687691087899802*^9}}],
+
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"[", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\[Kappa]", "a"], "2"], 
+      RowBox[{"-", 
+       RowBox[{"\[ImaginaryI]", 
+        RowBox[{"(", " ", 
+         RowBox[{"\[Omega]1", 
+          RowBox[{"-", 
+           SubscriptBox["\[Omega]", "a"]}]}], ")"}]}]}]}], " ", "]"}], 
+    FractionBox[
+     StyleBox[
+      RowBox[{"(", " ", 
+       RowBox[{
+        SuperscriptBox["a", "out"], "+", 
+        SuperscriptBox["a", "in"]}], ")"}],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "a"]]]}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "\[ImaginaryI]"}], 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["g", "3"], 
+       RowBox[{"\[LeftAngleBracket]", "c", "\[RightAngleBracket]"}]}], 
+      SqrtBox[
+       SubscriptBox["\[Kappa]", "b"]]], 
+     SuperscriptBox["b", 
+      SuperscriptBox["out", "\[Dagger]"]]}], "+", 
+    RowBox[{
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "a"]], 
+     SuperscriptBox["a", "in"]}]}]}],
+  FontFamily->"Arial Narrow",
+  FontColor->RGBColor[1, 0, 0]], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["[",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]], 
+    RowBox[{
+     StyleBox[
+      FractionBox[
+       SubscriptBox["\[Kappa]", "b"], "2"],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     RowBox[{
+      StyleBox["-",
+       FontFamily->"Arial Narrow",
+       FontColor->RGBColor[1, 0, 0]], 
+      RowBox[{
+       StyleBox["\[ImaginaryI]",
+        FontFamily->"Arial Narrow",
+        FontColor->RGBColor[1, 0, 0]], 
+       RowBox[{
+        StyleBox["(",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[" ",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[
+         RowBox[{"\[Omega]2", 
+          RowBox[{"-", 
+           SubscriptBox["\[Omega]", "b"]}]}],
+         FontFamily->"Arial",
+         FontColor->RGBColor[1., 0., 0.]], 
+        StyleBox[" ",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[")",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]]}]}]}]}], 
+    StyleBox["]",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]]}], 
+   StyleBox[
+    FractionBox[
+     StyleBox[
+      SuperscriptBox[
+       StyleBox["b",
+        FontFamily->"Arial Narrow",
+        FontColor->RGBColor[1, 0, 0]], "out"],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "b"]]],
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]]}], 
+  StyleBox["=",
+   FontFamily->"Arial Narrow",
+   FontColor->RGBColor[1, 0, 0]], 
+  RowBox[{
+   StyleBox[
+    RowBox[{"-", "\[ImaginaryI]"}],
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]], 
+   StyleBox[" ",
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]], 
+   StyleBox[
+    FractionBox[
+     RowBox[{
+      SubscriptBox["g", "3"], 
+      StyleBox[
+       RowBox[{"\[LeftAngleBracket]", "c", "\[RightAngleBracket]"}],
+       FontFamily->"Arial Narrow",
+       FontColor->RGBColor[1, 0, 0]]}], 
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "a"]]],
+    FontFamily->"Arial",
+    FontColor->RGBColor[1., 0., 0.]], 
+   StyleBox[
+    RowBox[{"(", " ", 
+     RowBox[{
+      SuperscriptBox["a", 
+       SuperscriptBox["out", "\[Dagger]"]], "+", 
+      SuperscriptBox["a", 
+       SuperscriptBox["in", "\[Dagger]"]]}], ")"}],
+    FontFamily->"Arial",
+    FontColor->RGBColor[1., 0., 0.]]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.687693232965493*^9, 3.68769323325651*^9}, 
+   3.6876932684685235`*^9, {3.687693326078819*^9, 3.687693368640253*^9}, {
+   3.6876934028082075`*^9, 3.68769356790065*^9}, 3.6876936674613447`*^9, {
+   3.6877161509903293`*^9, 3.6877161564146395`*^9}, {3.6877220098374357`*^9, 
+   3.6877220115255327`*^9}, {3.687811659818122*^9, 3.6878116789222145`*^9}, {
+   3.6900570420417447`*^9, 3.6900570463779926`*^9}, {3.6900628158959904`*^9, 
+   3.690062819128175*^9}, {3.6900628821607804`*^9, 3.6900628909032803`*^9}, {
+   3.6900703742883053`*^9, 3.69007038153572*^9}, {3.692469294703306*^9, 
+   3.692469341518984*^9}, {3.6924693868355756`*^9, 3.692469397102163*^9}, {
+   3.6924694275849066`*^9, 3.6924694377884903`*^9}, 3.69246946978032*^9, {
+   3.6924695025071917`*^9, 3.6924695153549266`*^9}, 3.693222931950079*^9, {
+   3.693222984517086*^9, 3.6932229904334245`*^9}, {3.6964331662263145`*^9, 
+   3.696433166511331*^9}, {3.6980048051143556`*^9, 3.6980048604435205`*^9}, {
+   3.737195206819152*^9, 
+   3.737195213937559*^9}},ExpressionUUID->"89b7107e-ab80-4753-a3b1-\
+8ede502e6c9f"],
+
+Cell[TextData[{
+ "Assume \[Alpha] =",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["a", "out"], 
+      SuperscriptBox["a", "in"]], " ", "and", " "}]}], TraditionalForm]]],
+ "\[Beta] = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["b", 
+     SuperscriptBox["out", "\[Dagger]"]], "ain"], TraditionalForm]]],
+ " , where \[Alpha] means reflection and \[Beta] is transmission."
+}], "Text",
+ CellChangeTimes->{{3.687716158965785*^9, 3.6877162260146203`*^9}, {
+   3.6877162957286077`*^9, 3.687716296912675*^9}, {3.6877173294547334`*^9, 
+   3.687717393456394*^9}, {3.6877240592866573`*^9, 3.687724088887351*^9}, 
+   3.688813602106041*^9}],
+
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"[", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\[Kappa]", "a"], "2"], 
+      RowBox[{"-", 
+       RowBox[{"\[ImaginaryI]", 
+        RowBox[{"(", " ", 
+         RowBox[{"\[Omega]1", 
+          RowBox[{"-", 
+           SubscriptBox["\[Omega]", "a"]}]}], ")"}]}]}]}], " ", "]"}], 
+    FractionBox[
+     StyleBox[
+      RowBox[{"(", " ", 
+       RowBox[{"1", "+", "\[Alpha]"}], ")"}],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "a"]]]}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "\[ImaginaryI]"}], 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["g", "3"], 
+       RowBox[{"\[LeftAngleBracket]", "c", "\[RightAngleBracket]"}]}], 
+      SqrtBox[
+       SubscriptBox["\[Kappa]", "b"]]], "\[Beta]"}], "+", 
+    SqrtBox[
+     SubscriptBox["\[Kappa]", "a"]]}]}],
+  FontFamily->"Arial Narrow",
+  FontColor->RGBColor[1, 0, 0]], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["[",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]], 
+    RowBox[{
+     StyleBox[
+      FractionBox[
+       SubscriptBox["\[Kappa]", "b"], "2"],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     RowBox[{
+      StyleBox["-",
+       FontFamily->"Arial Narrow",
+       FontColor->RGBColor[1, 0, 0]], 
+      RowBox[{
+       StyleBox["\[ImaginaryI]",
+        FontFamily->"Arial Narrow",
+        FontColor->RGBColor[1, 0, 0]], 
+       RowBox[{
+        StyleBox["(",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[" ",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[
+         RowBox[{"\[Omega]2", 
+          RowBox[{"-", 
+           SubscriptBox["\[Omega]", "b"]}]}],
+         FontFamily->"Arial",
+         FontColor->RGBColor[1., 0., 0.]], 
+        StyleBox[" ",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[")",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]]}]}]}]}], 
+    StyleBox["]",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]]}], 
+   StyleBox[
+    FractionBox[
+     StyleBox[
+      SuperscriptBox[
+       StyleBox["\[Beta]",
+        FontFamily->"Arial Narrow",
+        FontColor->RGBColor[1, 0, 0]], "*"],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "b"]]],
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]]}], 
+  StyleBox["=",
+   FontFamily->"Arial Narrow",
+   FontColor->RGBColor[1, 0, 0]], 
+  RowBox[{
+   StyleBox[
+    RowBox[{"-", "\[ImaginaryI]"}],
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]], 
+   StyleBox[" ",
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]], 
+   StyleBox[
+    FractionBox[
+     RowBox[{
+      SubscriptBox["g", "3"], 
+      StyleBox[
+       RowBox[{"\[LeftAngleBracket]", "c", "\[RightAngleBracket]"}],
+       FontFamily->"Arial Narrow",
+       FontColor->RGBColor[1, 0, 0]]}], 
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "a"]]],
+    FontFamily->"Arial",
+    FontColor->RGBColor[1., 0., 0.]], 
+   StyleBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      SuperscriptBox["\[Alpha]", "*"]}], ")"}],
+    FontFamily->"Arial",
+    FontColor->RGBColor[1., 0., 0.]]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.687693232965493*^9, 3.68769323325651*^9}, 
+   3.6876932684685235`*^9, {3.687693326078819*^9, 3.687693368640253*^9}, {
+   3.6876934028082075`*^9, 3.68769356790065*^9}, 3.6876936674613447`*^9, {
+   3.6877161509903293`*^9, 3.6877161564146395`*^9}, {3.6877220098374357`*^9, 
+   3.6877220115255327`*^9}, {3.687811659818122*^9, 3.6878116789222145`*^9}, {
+   3.6900570420417447`*^9, 3.6900570463779926`*^9}, {3.6900628158959904`*^9, 
+   3.690062819128175*^9}, {3.6900628821607804`*^9, 3.6900628909032803`*^9}, {
+   3.6900703742883053`*^9, 3.69007038153572*^9}, {3.692469294703306*^9, 
+   3.692469341518984*^9}, {3.6924693868355756`*^9, 3.692469397102163*^9}, {
+   3.6924694275849066`*^9, 3.6924694377884903`*^9}, 3.69246946978032*^9, {
+   3.6924695025071917`*^9, 3.6924695153549266`*^9}, {3.6924695472267494`*^9, 
+   3.6924696217010093`*^9}, {3.693223037495116*^9, 3.693223123034009*^9}, {
+   3.6964331698415213`*^9, 3.696433170023532*^9}, {3.698004870138075*^9, 
+   3.6980049148086295`*^9}, {3.737195220178916*^9, 
+   3.7371952442412925`*^9}},ExpressionUUID->"cafca136-291c-4e5a-8d47-\
+f6fbeff01a8f"],
+
+Cell["\<\
+Drive at \[Omega]1+\[Omega]2=\[Omega]a+\[Omega]b+\[Epsilon], which yields \
+\[Omega]2=\[Omega]a+\[Omega]b+\[Epsilon]-\[Omega]1. 
+Set \[Omega]1-\[Omega]a=\[CapitalDelta]. Thus the equations reduce to the \
+following:\
+\>", "Text",
+ CellChangeTimes->{{3.690062920670983*^9, 3.690063056863773*^9}, {
+  3.690070397039607*^9, 3.690070401735875*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["[",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]], 
+    RowBox[{
+     StyleBox[
+      FractionBox[
+       SubscriptBox["\[Kappa]", "a"], "2"],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["-",
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     RowBox[{
+      StyleBox["\[ImaginaryI]",
+       FontFamily->"Arial Narrow",
+       FontColor->RGBColor[1, 0, 0]], 
+      RowBox[{
+       StyleBox["(",
+        FontFamily->"Arial Narrow",
+        FontColor->RGBColor[1, 0, 0]], 
+       StyleBox[" ",
+        FontFamily->"Arial Narrow",
+        FontColor->RGBColor[1, 0, 0]], 
+       StyleBox["\[CapitalDelta]",
+        FontFamily->"Arial",
+        FontColor->RGBColor[1., 0., 0.]], 
+       StyleBox[")",
+        FontFamily->"Arial Narrow",
+        FontColor->RGBColor[1, 0, 0]]}]}]}], 
+    StyleBox[" ",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]], 
+    StyleBox["]",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]]}], 
+   StyleBox[
+    FractionBox[
+     StyleBox[
+      RowBox[{"(", " ", 
+       RowBox[{"1", "+", "\[Alpha]"}], ")"}],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "a"]]],
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]]}], 
+  StyleBox["=",
+   FontFamily->"Arial Narrow",
+   FontColor->RGBColor[1, 0, 0]], 
+  StyleBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "\[ImaginaryI]"}], 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["g", "3"], 
+       RowBox[{"\[LeftAngleBracket]", "c", "\[RightAngleBracket]"}]}], 
+      SqrtBox[
+       SubscriptBox["\[Kappa]", "b"]]], "\[Beta]"}], "+", 
+    SqrtBox[
+     SubscriptBox["\[Kappa]", "a"]]}],
+   FontFamily->"Arial Narrow",
+   FontColor->RGBColor[1, 0, 0]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["[",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]], 
+    RowBox[{
+     StyleBox[
+      FractionBox[
+       SubscriptBox["\[Kappa]", "b"], "2"],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     RowBox[{
+      StyleBox["-",
+       FontFamily->"Arial Narrow",
+       FontColor->RGBColor[1, 0, 0]], 
+      RowBox[{
+       StyleBox["\[ImaginaryI]",
+        FontFamily->"Arial Narrow",
+        FontColor->RGBColor[1, 0, 0]], 
+       RowBox[{
+        StyleBox["(",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[" ",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        RowBox[{
+         StyleBox[
+          RowBox[{"-", "\[CapitalDelta]"}],
+          FontFamily->"Arial Narrow",
+          FontColor->RGBColor[1, 0, 0]], 
+         StyleBox["+",
+          FontFamily->"Arial",
+          FontColor->RGBColor[1., 0., 0.]], 
+         StyleBox["\[Epsilon]",
+          FontFamily->"Arial",
+          FontColor->RGBColor[1., 0., 0.]]}], 
+        StyleBox[" ",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[")",
+         FontFamily->"Arial Narrow",
+         FontColor->RGBColor[1, 0, 0]]}]}]}]}], 
+    StyleBox["]",
+     FontFamily->"Arial Narrow",
+     FontColor->RGBColor[1, 0, 0]]}], 
+   StyleBox[
+    FractionBox[
+     StyleBox[
+      SuperscriptBox[
+       StyleBox["\[Beta]",
+        FontFamily->"Arial Narrow",
+        FontColor->RGBColor[1, 0, 0]], "*"],
+      FontFamily->"Arial Narrow",
+      FontColor->RGBColor[1, 0, 0]], 
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "b"]]],
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]]}], 
+  StyleBox["=",
+   FontFamily->"Arial Narrow",
+   FontColor->RGBColor[1, 0, 0]], 
+  RowBox[{
+   StyleBox[
+    RowBox[{"-", "\[ImaginaryI]"}],
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]], 
+   StyleBox[" ",
+    FontFamily->"Arial Narrow",
+    FontColor->RGBColor[1, 0, 0]], 
+   StyleBox[
+    FractionBox[
+     RowBox[{
+      SubscriptBox["g", "3"], 
+      StyleBox[
+       RowBox[{"\[LeftAngleBracket]", "c", "\[RightAngleBracket]"}],
+       FontFamily->"Arial Narrow",
+       FontColor->RGBColor[1, 0, 0]]}], 
+     SqrtBox[
+      SubscriptBox["\[Kappa]", "a"]]],
+    FontFamily->"Arial",
+    FontColor->RGBColor[1., 0., 0.]], 
+   StyleBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      SuperscriptBox["\[Alpha]", "*"]}], ")"}],
+    FontFamily->"Arial",
+    FontColor->RGBColor[1., 0., 0.]]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.687693232965493*^9, 3.68769323325651*^9}, 
+   3.6876932684685235`*^9, {3.687693326078819*^9, 3.687693368640253*^9}, {
+   3.6876934028082075`*^9, 3.68769356790065*^9}, 3.6876936674613447`*^9, {
+   3.6877161509903293`*^9, 3.6877161564146395`*^9}, {3.6877220098374357`*^9, 
+   3.6877220115255327`*^9}, {3.687811659818122*^9, 3.6878116789222145`*^9}, {
+   3.6900570420417447`*^9, 3.6900570463779926`*^9}, {3.6900628158959904`*^9, 
+   3.690062819128175*^9}, {3.6900628821607804`*^9, 3.6900628909032803`*^9}, {
+   3.6900703742883053`*^9, 3.69007038153572*^9}, {3.692469294703306*^9, 
+   3.692469341518984*^9}, {3.6924693868355756`*^9, 3.692469397102163*^9}, {
+   3.6924694275849066`*^9, 3.6924694377884903`*^9}, 3.69246946978032*^9, {
+   3.6924695025071917`*^9, 3.6924695153549266`*^9}, {3.6924695472267494`*^9, 
+   3.6924696217010093`*^9}, {3.692469658643122*^9, 3.692469664986485*^9}, {
+   3.6924696959602566`*^9, 3.6924697024896297`*^9}, {3.693223193079015*^9, 
+   3.693223209300943*^9}, {3.693223275653738*^9, 3.6932232761137643`*^9}, {
+   3.6964331737147427`*^9, 3.696433173855751*^9}, {3.6980049270863323`*^9, 
+   3.69800498405159*^9}, {3.737195256931018*^9, 
+   3.7371952643134403`*^9}},ExpressionUUID->"f30ce3fb-d567-4806-b3a5-\
+9cf00001e92f"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 998},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 263, 3, 70, "Section", "ExpressionUUID" -> \
+"c8172c7a-7a00-48c0-b204-90800c70918a"],
+Cell[CellGroupData[{
+Cell[868, 29, 107, 1, 49, "Subsection", "ExpressionUUID" -> \
+"5ddfa257-bfd9-40e8-ba87-be4ab94fe0c4"],
+Cell[978, 32, 239, 3, 30, "Text", "ExpressionUUID" -> \
+"8aa25f26-6278-472b-8565-6f79edbd9eac"],
+Cell[1220, 37, 1213, 30, 50, "DisplayFormula", "ExpressionUUID" -> \
+"7db883c0-9af4-4acf-bfc1-960b4b2e9f7a"],
+Cell[2436, 69, 139, 1, 30, "Text", "ExpressionUUID" -> \
+"0e523bb5-0b95-4ada-a2e7-0df3c95628ce"],
+Cell[2578, 72, 1193, 30, 44, "DisplayFormulaNumbered", "ExpressionUUID" -> \
+"35c9b3f4-35bf-4c11-919c-5d2a81b394f4"],
+Cell[3774, 104, 1524, 47, 44, "DisplayFormulaNumbered", "ExpressionUUID" -> \
+"21983de1-ff22-47e6-b5ec-c6cbf2ee6ed1"],
+Cell[5301, 153, 533, 7, 30, "Text", "ExpressionUUID" -> \
+"f24b4e5c-59f6-4083-bb43-eae8b3b5d1a4"],
+Cell[5837, 162, 2912, 83, 79, "DisplayFormula", "ExpressionUUID" -> \
+"3604f751-7bb6-4577-b406-bce6ce6d83b7"],
+Cell[8752, 247, 1641, 40, 41, "DisplayFormulaNumbered", "ExpressionUUID" -> \
+"4a383908-4c26-4ba1-a494-2fa7a375342d"],
+Cell[10396, 289, 2635, 77, 41, "DisplayFormulaNumbered", "ExpressionUUID" -> \
+"092fb653-e169-4788-86c9-a84f7310ae3a"],
+Cell[13034, 368, 320, 9, 32, "Text", "ExpressionUUID" -> \
+"c565ccbf-4499-4cb9-af89-a85ee4b4f4b3"],
+Cell[13357, 379, 4788, 143, 112, "DisplayFormula", "ExpressionUUID" -> \
+"89b7107e-ab80-4753-a3b1-8ede502e6c9f"],
+Cell[18148, 524, 698, 20, 51, "Text", "ExpressionUUID" -> \
+"197a011a-6c72-4235-a7f3-dd28b444e554"],
+Cell[18849, 546, 4550, 134, 106, "DisplayFormula", "ExpressionUUID" -> \
+"cafca136-291c-4e5a-8d47-f6fbeff01a8f"],
+Cell[23402, 682, 354, 7, 49, "Text", "ExpressionUUID" -> \
+"3074ed63-ac3c-41d9-a8c7-6ed648d63598"],
+Cell[23759, 691, 5803, 173, 106, "DisplayFormula", "ExpressionUUID" -> \
+"f30ce3fb-d567-4806-b3a5-9cf00001e92f"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

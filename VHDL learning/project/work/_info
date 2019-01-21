@@ -1,0 +1,321 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dH:/Users/chz78/VHDL learning
+Efis1234_tb
+Z0 w1532799833
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dH:/Users/chz78/VHDL learning/project
+Z6 8H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/FIS_1234_tb.vhd
+Z7 FH:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/FIS_1234_tb.vhd
+l0
+L5
+VkI6oYU:1dXEHbNmM9]>Dg0
+!s100 h`JO]`4^W08BooXd`_9aj1
+Z8 OP;C;10.4a;61
+32
+Z9 !s110 1532813002
+!i10b 1
+Z10 !s108 1532813002.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/FIS_1234_tb.vhd|
+Z12 !s107 H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/FIS_1234_tb.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit -O0
+Z14 tExplicit 1
+Abehave
+R1
+R2
+R3
+R4
+DEx4 work 10 fis1234_tb 0 22 kI6oYU:1dXEHbNmM9]>Dg0
+l79
+L8
+VFRb[OL]3FVz2En[gidA_20
+!s100 h_Mk:Vg0l>>>aU5:La7Ie0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Efis123_tb
+Z15 w1532966513
+R1
+R2
+R3
+R4
+R5
+Z16 8H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/FIS_123_tb.vhd
+Z17 FH:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/FIS_123_tb.vhd
+l0
+L5
+ViX7@X5^kc1W7Oah17h<@Z1
+!s100 <;0BXh@a]i@W77z>C^aQc2
+R8
+32
+Z18 !s110 1532967797
+!i10b 1
+Z19 !s108 1532967797.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/FIS_123_tb.vhd|
+Z21 !s107 H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/FIS_123_tb.vhd|
+!i113 1
+R13
+R14
+Abehave
+R1
+R2
+R3
+R4
+DEx4 work 9 fis123_tb 0 22 iX7@X5^kc1W7Oah17h<@Z1
+l60
+L8
+VBkG0jg8QoHC=PdDIAHflj3
+!s100 ]k8JTMH8mLOh]NUVF^FZe3
+R8
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R13
+R14
+Efix_to_flo_32
+Z22 w1532966894
+Z23 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+R4
+R5
+Z24 8H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/fix_to_float_32.vhd
+Z25 FH:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/fix_to_float_32.vhd
+l0
+L14
+Va8amGFQ2DBLT1Cie9fMNc1
+!s100 jC^2nXWRJU2A][VOB7]B62
+R8
+32
+Z26 !s110 1532967798
+!i10b 1
+Z27 !s108 1532967798.000000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/fix_to_float_32.vhd|
+Z29 !s107 H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/fix_to_float_32.vhd|
+!i113 1
+R13
+R14
+Afpga
+R23
+R1
+R2
+R3
+R4
+Z30 DEx4 work 13 fix_to_flo_32 0 22 a8amGFQ2DBLT1Cie9fMNc1
+l31
+L29
+Z31 VdLQo644MRdn]J701C@fY01
+Z32 !s100 YzKX;7HzU@:V]6>?l7P8B3
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R13
+R14
+Eflo_to_fix_16
+Z33 w1532851360
+R23
+R1
+R2
+R3
+R4
+R5
+Z34 8H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/flo_to_fix_16.vhd
+Z35 FH:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/flo_to_fix_16.vhd
+l0
+L20
+VX5^oil_D1[MBJR]Z9PjQL2
+!s100 aWziP2mfR>1BZncVOZ9jN2
+R8
+32
+R26
+!i10b 1
+R27
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/flo_to_fix_16.vhd|
+Z37 !s107 H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/flo_to_fix_16.vhd|
+!i113 1
+R13
+R14
+Afpga
+R23
+R1
+R2
+R3
+R4
+DEx4 work 13 flo_to_fix_16 0 22 X5^oil_D1[MBJR]Z9PjQL2
+l32
+L30
+VMDGoe8J2TUB01Glem5<`33
+!s100 J7UMEDfl55nlPiTZP5WcC2
+R8
+32
+R26
+!i10b 1
+R27
+R36
+R37
+!i113 1
+R13
+R14
+Einv_sqrt
+Z38 w1532967797
+R23
+R1
+R2
+R3
+R4
+R5
+Z39 8H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/Fast_Inverse_Sqrt.vhd
+Z40 FH:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/Fast_Inverse_Sqrt.vhd
+l0
+L14
+Vf6ZZ<U;dgD<mVM=Aa`>ok1
+!s100 N_K:?O6VgoU_GFo4gPDF83
+R8
+32
+R26
+!i10b 1
+R27
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/Fast_Inverse_Sqrt.vhd|
+Z42 !s107 H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v2/Fast_Inverse_Sqrt.vhd|
+!i113 1
+R13
+R14
+Afpga
+R23
+R1
+R2
+R3
+R4
+DEx4 work 8 inv_sqrt 0 22 f6ZZ<U;dgD<mVM=Aa`>ok1
+l35
+L25
+V:6DG35n=Q`]D28YhgBB@n0
+!s100 lA1i<iLzXj]U=>`eZoYa20
+R8
+32
+R26
+!i10b 1
+R27
+R41
+R42
+!i113 1
+R13
+R14
+Einv_sqrt_i
+Z43 w1532751847
+R23
+R1
+R2
+R3
+R4
+R5
+Z44 8H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/Fast_Inverse_Sqrt_I.vhd
+Z45 FH:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/Fast_Inverse_Sqrt_I.vhd
+l0
+L14
+V]051M9FJ4I^@QDehF3?>]1
+!s100 [zGD>gNzk[6oZ6m7Xl9;m3
+R8
+32
+R9
+!i10b 1
+R10
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/Fast_Inverse_Sqrt_I.vhd|
+Z47 !s107 H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/Fast_Inverse_Sqrt_I.vhd|
+!i113 1
+R13
+R14
+Afpga
+R23
+R1
+R2
+R3
+R4
+DEx4 work 10 inv_sqrt_i 0 22 ]051M9FJ4I^@QDehF3?>]1
+l31
+L27
+VfC^>AhecBRVnR60]B`<k;3
+!s100 >f8ci74_>ME9?c[PCFe:O1
+R8
+32
+R9
+!i10b 1
+R10
+R46
+R47
+!i113 1
+R13
+R14
+Einv_sqrt_ii
+Z48 w1532813001
+R23
+R1
+R2
+R3
+R4
+R5
+Z49 8H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/Fast_Inverse_Sqrt_II.vhd
+Z50 FH:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/Fast_Inverse_Sqrt_II.vhd
+l0
+L15
+VJeoF9e<zWRJ]_C>^>dkJD2
+!s100 hM8?YFN^YJNJYN>MJZE<W2
+R8
+32
+R9
+!i10b 1
+R10
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/Fast_Inverse_Sqrt_II.vhd|
+Z52 !s107 H:/Users/chz78/VHDL learning/Fast_Inverse_Sqrt/v1/Fast_Inverse_Sqrt_II.vhd|
+!i113 1
+R13
+R14
+Afpga
+R23
+R1
+R2
+R3
+R4
+DEx4 work 11 inv_sqrt_ii 0 22 JeoF9e<zWRJ]_C>^>dkJD2
+l35
+L26
+VbO>aohFIGNAFjjC?[>OH<0
+!s100 ]h[DBSDAI7=JXX6;UCE4h0
+R8
+32
+R9
+!i10b 1
+R10
+R51
+R52
+!i113 1
+R13
+R14

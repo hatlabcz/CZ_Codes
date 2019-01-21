@@ -1,0 +1,719 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23842,        710]
+NotebookOptionsPosition[     22811,        672]
+NotebookOutlinePosition[     23187,        688]
+CellTagsIndexPosition[     23144,        685]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ExpandNCM", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"h", ":", "NonCommutativeMultiply"}], ")"}], "[", 
+     RowBox[{"a___", ",", "b_Plus", ",", "c___"}], "]"}], "]"}], ":=", 
+   RowBox[{"Distribute", "[", 
+    RowBox[{
+     RowBox[{"h", "[", 
+      RowBox[{"a", ",", "b", ",", "c"}], "]"}], ",", "Plus", ",", "h", ",", 
+     "Plus", ",", 
+     RowBox[{
+      RowBox[{"ExpandNCM", "[", 
+       RowBox[{"h", "[", "##", "]"}], "]"}], "&"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ExpandNCM", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"h", ":", "NonCommutativeMultiply"}], ")"}], "[", 
+     RowBox[{"a___", ",", "b_Times", ",", "c___"}], "]"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Most", "[", "b", "]"}], 
+    RowBox[{"ExpandNCM", "[", 
+     RowBox[{"h", "[", 
+      RowBox[{"a", ",", 
+       RowBox[{"Last", "[", "b", "]"}], ",", "c"}], "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ExpandNCM", "[", "a_", "]"}], ":=", 
+   RowBox[{"ExpandAll", "[", "a", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7377481273224*^9, 3.7377481331504*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "+", 
+      SuperscriptBox["a", "\[Dagger]"]}], ")"}], "**", 
+    RowBox[{"(", 
+     RowBox[{"a", "+", 
+      SuperscriptBox["a", "\[Dagger]"]}], ")"}], "**", 
+    RowBox[{"(", 
+     RowBox[{"a", "+", 
+      SuperscriptBox["a", "\[Dagger]"]}], ")"}], "**", 
+    RowBox[{"(", 
+     RowBox[{"a", "+", 
+      SuperscriptBox["a", "\[Dagger]"]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"H1", "=", 
+   RowBox[{"ExpandNCM", "[", "H", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"H2", "=", 
+   RowBox[{"H1", "/.", 
+    RowBox[{
+     RowBox[{"a", "**", 
+      SuperscriptBox["a", "\[Dagger]"]}], "->", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["a", "\[Dagger]"], "**", "a"}], "+", "1"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"H3", "=", 
+   RowBox[{
+    RowBox[{"H2", "/.", 
+     RowBox[{
+      RowBox[{"a_", "**", "b_", "**", "c_"}], ":>", 
+      RowBox[{"ExpandNCM", "[", 
+       RowBox[{"a", "**", "b", "**", "c"}], "]"}]}]}], "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a_", " ", "x_"}], ")"}], "\[RuleDelayed]", 
+     RowBox[{"ExpandNCM", "[", 
+      RowBox[{"a", " ", "x"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"H4", "=", 
+  RowBox[{
+   RowBox[{"H3", "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "**", "x_"}], ")"}], "\[RuleDelayed]", "x"}]}], "/.", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"x_", "**", "1"}], ")"}], "\[RuleDelayed]", "x"}]}]}]}], "Input",
+ CellChangeTimes->{{3.7377413172754*^9, 3.7377413846214*^9}, {
+   3.7377414197994003`*^9, 3.7377414839974003`*^9}, {3.7377415539174*^9, 
+   3.7377415678964*^9}, {3.7377429668873997`*^9, 3.7377430702934*^9}, {
+   3.7377431346994*^9, 3.7377432628244*^9}, 3.7377433071074*^9, {
+   3.7377433407194*^9, 3.7377433608314*^9}, {3.7377434066754*^9, 
+   3.7377434182363997`*^9}, {3.7377434623974*^9, 3.7377434646784*^9}, {
+   3.7377435143754*^9, 3.7377435855544*^9}, 3.7377436262404003`*^9, {
+   3.7377436629154*^9, 3.7377436730304003`*^9}, {3.7377437173514*^9, 
+   3.7377437196714*^9}, {3.7377437742474003`*^9, 3.7377439016854*^9}, {
+   3.7377439349444*^9, 3.7377439865193996`*^9}, {3.7377440191113997`*^9, 
+   3.7377440427674*^9}, {3.7377446482064*^9, 3.7377446539174*^9}, {
+   3.7377447087664003`*^9, 3.7377447168943996`*^9}, 3.7377448623824*^9, {
+   3.7377450952384*^9, 3.7377450962054*^9}, {3.7377467424474*^9, 
+   3.7377467434224*^9}, 3.7377479632244*^9, {3.7377481171734*^9, 
+   3.7377481376144*^9}},
+ FontSize->12],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"3", " ", 
+   RowBox[{"a", "**", "a"}]}], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{"a", "**", 
+    SuperscriptBox["a", "\[Dagger]"]}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"]}]}], "+", 
+  RowBox[{"a", "**", "a", "**", "a", "**", "a"}], "+", 
+  RowBox[{"a", "**", "a", "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", "a"}], "+", 
+  RowBox[{"a", "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a"}], "+", 
+  RowBox[{"a", "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", 
+   SuperscriptBox["a", "\[Dagger]"]}], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a", "**", "a"}]}], 
+  "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a", "**", 
+   SuperscriptBox["a", "\[Dagger]"]}], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"]}], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", 
+   SuperscriptBox["a", "\[Dagger]"]}], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"]}]}]], "Output",
+ CellChangeTimes->{{3.7377432601633997`*^9, 3.7377432636424*^9}, {
+   3.7377433040824003`*^9, 3.7377433081594*^9}, {3.7377433430264*^9, 
+   3.7377433653664*^9}, {3.7377434079704*^9, 3.7377434194364*^9}, 
+   3.7377434665284*^9, {3.7377435172074003`*^9, 3.7377435864334*^9}, 
+   3.7377436280994*^9, {3.7377436641424*^9, 3.7377436737153997`*^9}, 
+   3.7377438041514*^9, {3.7377438891354*^9, 3.7377439024384003`*^9}, {
+   3.7377439372094*^9, 3.7377439803854*^9}, 3.7377446595144*^9, 
+   3.7377447093114*^9, 3.7377450969533997`*^9, 3.7377479836354*^9},
+ FontSize->12]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H5", "=", 
+   RowBox[{"H4", "/.", 
+    RowBox[{
+     RowBox[{"a", "**", 
+      SuperscriptBox["a", "\[Dagger]"]}], "->", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["a", "\[Dagger]"], "**", "a"}], "+", "1"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"H6", "=", 
+   RowBox[{
+    RowBox[{"H5", "/.", 
+     RowBox[{
+      RowBox[{"a_", "**", "b_", "**", "c_"}], ":>", 
+      RowBox[{"ExpandNCM", "[", 
+       RowBox[{"a", "**", "b", "**", "c"}], "]"}]}]}], "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a_", " ", "x_"}], ")"}], "\[RuleDelayed]", 
+     RowBox[{"ExpandNCM", "[", 
+      RowBox[{"a", " ", "x"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"H7", "=", 
+  RowBox[{
+   RowBox[{"H6", "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "**", "x_"}], ")"}], "\[RuleDelayed]", "x"}]}], "/.", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"x_", "**", "1"}], ")"}], "\[RuleDelayed]", "x"}]}]}]}], "Input",
+ CellChangeTimes->{{3.7377440377894*^9, 3.7377440889734*^9}, {
+   3.7377441287684*^9, 3.7377441330774*^9}, {3.7377443028543997`*^9, 
+   3.7377443920464*^9}, {3.7377444454133997`*^9, 3.7377444552934*^9}, {
+   3.7377451124063997`*^9, 3.7377451154544*^9}, {3.7377465064384003`*^9, 
+   3.7377465188634*^9}, {3.7377465650783997`*^9, 3.7377465929024*^9}, {
+   3.7377467390313997`*^9, 3.7377467404934*^9}, 3.7377478658943996`*^9, {
+   3.7377479080383997`*^9, 3.7377479402384*^9}},
+ FontSize->12],
+
+Cell[BoxData[
+ RowBox[{"2", "+", 
+  RowBox[{"5", " ", 
+   RowBox[{"a", "**", "a"}]}], "+", 
+  RowBox[{"a", "**", 
+   SuperscriptBox["a", "\[Dagger]"]}], "+", 
+  RowBox[{"8", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{"5", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"]}]}], "+", 
+  RowBox[{"a", "**", "a", "**", "a", "**", "a"}], "+", 
+  RowBox[{"a", "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a"}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a", "**", "a"}]}], 
+  "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a", "**", 
+   SuperscriptBox["a", "\[Dagger]"]}], "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", "a"}], "+", 
+  RowBox[{"4", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", 
+   SuperscriptBox["a", "\[Dagger]"]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"]}]}]], "Output",
+ CellChangeTimes->{
+  3.7377440772414*^9, {3.7377442978844*^9, 3.7377443036443996`*^9}, 
+   3.7377443927974*^9, 3.7377444622014*^9, 3.7377451160193996`*^9, 
+   3.7377465068594*^9, {3.7377465718894*^9, 3.7377465935573997`*^9}, 
+   3.7377478663924*^9, 3.7377479099174*^9, 3.7377479409644003`*^9, 
+   3.7377479851654*^9},
+ FontSize->12]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H8", "=", 
+   RowBox[{"H7", "/.", 
+    RowBox[{
+     RowBox[{"a", "**", 
+      SuperscriptBox["a", "\[Dagger]"]}], "->", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["a", "\[Dagger]"], "**", "a"}], "+", "1"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"H9", "=", 
+   RowBox[{
+    RowBox[{"H8", "/.", 
+     RowBox[{
+      RowBox[{"a_", "**", "b_", "**", "c_"}], ":>", 
+      RowBox[{"ExpandNCM", "[", 
+       RowBox[{"a", "**", "b", "**", "c"}], "]"}]}]}], "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a_", " ", "x_"}], ")"}], "\[RuleDelayed]", 
+     RowBox[{"ExpandNCM", "[", 
+      RowBox[{"a", " ", "x"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"H10", "=", 
+  RowBox[{
+   RowBox[{"H9", "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "**", "x_"}], ")"}], "\[RuleDelayed]", "x"}]}], "/.", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"x_", "**", "1"}], ")"}], "\[RuleDelayed]", "x"}]}]}]}], "Input",
+ CellChangeTimes->{{3.7377452291984*^9, 3.7377453008864*^9}, {
+   3.7377453313504*^9, 3.7377453387894*^9}, {3.7377467348954*^9, 
+   3.7377467360864*^9}, 3.7377479730783997`*^9},
+ FontSize->12],
+
+Cell[BoxData[
+ RowBox[{"3", "+", 
+  RowBox[{"6", " ", 
+   RowBox[{"a", "**", "a"}]}], "+", 
+  RowBox[{"11", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{"6", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"]}]}], "+", 
+  RowBox[{"a", "**", "a", "**", "a", "**", "a"}], "+", 
+  RowBox[{"4", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a", "**", "a"}]}], 
+  "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", "a"}], "+", 
+  RowBox[{"5", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a"}]}], "+", 
+  RowBox[{"4", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"]}]}]], "Output",
+ CellChangeTimes->{
+  3.7377452374304*^9, {3.7377452693434*^9, 3.7377453021454*^9}, {
+   3.7377453334844*^9, 3.7377453397514*^9}, 3.7377465985874*^9, 
+   3.7377479434814*^9, 3.7377479864144*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H11", "=", 
+   RowBox[{"H10", "/.", 
+    RowBox[{
+     RowBox[{"a", "**", 
+      SuperscriptBox["a", "\[Dagger]"]}], "->", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["a", "\[Dagger]"], "**", "a"}], "+", "1"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"H12", "=", 
+   RowBox[{
+    RowBox[{"H11", "/.", 
+     RowBox[{
+      RowBox[{"a_", "**", "b_", "**", "c_"}], ":>", 
+      RowBox[{"ExpandNCM", "[", 
+       RowBox[{"a", "**", "b", "**", "c"}], "]"}]}]}], "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a_", " ", "x_"}], ")"}], "\[RuleDelayed]", 
+     RowBox[{"ExpandNCM", "[", 
+      RowBox[{"a", " ", "x"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"H13", "=", 
+  RowBox[{
+   RowBox[{"H12", "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "**", "x_"}], ")"}], "\[RuleDelayed]", "x"}]}], "/.", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"x_", "**", "1"}], ")"}], "\[RuleDelayed]", "x"}]}]}]}], "Input",
+ CellChangeTimes->{{3.7377453414784*^9, 3.7377454117813997`*^9}, 
+   3.7377466059504004`*^9, {3.7377467239504004`*^9, 3.7377467248943996`*^9}, 
+   3.7377479786874*^9}],
+
+Cell[BoxData[
+ RowBox[{"3", "+", 
+  RowBox[{"6", " ", 
+   RowBox[{"a", "**", "a"}]}], "+", 
+  RowBox[{"12", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{"6", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"]}]}], "+", 
+  RowBox[{"a", "**", "a", "**", "a", "**", "a"}], "+", 
+  RowBox[{"4", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a", "**", "a"}]}], 
+  "+", 
+  RowBox[{"6", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a"}]}], "+", 
+  RowBox[{"4", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"]}]}]], "Output",
+ CellChangeTimes->{{3.7377453798124*^9, 3.7377454127134*^9}, 
+   3.7377466066604*^9, 3.7377467258784*^9, 3.7377479450504*^9, 
+   3.7377479877434*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Now we have a well-arranged form",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.7377477551714*^9, 3.7377477770934*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H14", "=", 
+   RowBox[{"H13", "/.", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["a_", "\[Dagger]"], "**", 
+      SuperscriptBox["a_", "\[Dagger]"], "**", "a_", "**", "a_"}], ":>", 
+     RowBox[{
+      SuperscriptBox["a", "\[Dagger]"], "**", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "**", 
+         SuperscriptBox["a", "\[Dagger]"]}], "-", "1"}], ")"}], "**", 
+      "a"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"H15", "=", 
+  RowBox[{
+   RowBox[{"H14", "/.", 
+    RowBox[{
+     RowBox[{"a_", "**", "b_", "**", "c_"}], ":>", 
+     RowBox[{"ExpandNCM", "[", 
+      RowBox[{"a", "**", "b", "**", "c"}], "]"}]}]}], "/.", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a_", " ", "x_"}], ")"}], "\[RuleDelayed]", 
+    RowBox[{"ExpandNCM", "[", 
+     RowBox[{"a", " ", "x"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"H16", "=", 
+  RowBox[{
+   RowBox[{"H15", "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"x_", "**", 
+       RowBox[{"-", "1"}]}], ")"}], "\[RuleDelayed]", 
+     RowBox[{"-", "x"}]}]}], "/.", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a_", " ", "x_"}], ")"}], "\[RuleDelayed]", 
+    RowBox[{"ExpandNCM", "[", 
+     RowBox[{"a", " ", "x"}], "]"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.7377466312494*^9, 3.7377466321014*^9}, {
+   3.7377467067014*^9, 3.7377467212934*^9}, {3.7377467646314*^9, 
+   3.7377467848134003`*^9}, {3.7377469950383997`*^9, 3.7377471176384*^9}, {
+   3.7377472445504*^9, 3.7377473151264*^9}, 3.7377475451744003`*^9, {
+   3.7377476171614*^9, 3.7377476212714*^9}, {3.7377476513914003`*^9, 
+   3.7377476546384*^9}}],
+
+Cell[BoxData[
+ RowBox[{"3", "+", 
+  RowBox[{"6", " ", 
+   RowBox[{"a", "**", "a"}]}], "+", 
+  RowBox[{"12", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{"6", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"]}]}], "+", 
+  RowBox[{"6", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], "**", "a"}]}], "+", 
+  RowBox[{"a", "**", "a", "**", "a", "**", "a"}], "+", 
+  RowBox[{"4", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a", "**", "a"}]}], 
+  "+", 
+  RowBox[{"6", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{"4", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"]}]}]], "Output",
+ CellChangeTimes->{3.7377476221754*^9, 3.7377476646714*^9}],
+
+Cell[BoxData[
+ RowBox[{"3", "+", 
+  RowBox[{"6", " ", 
+   RowBox[{"a", "**", "a"}]}], "+", 
+  RowBox[{"6", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"-", 
+      SuperscriptBox["a", "\[Dagger]"]}], ")"}], "**", "a"}]}], "+", 
+  RowBox[{"12", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{"6", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"]}]}], "+", 
+  RowBox[{"a", "**", "a", "**", "a", "**", "a"}], "+", 
+  RowBox[{"4", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a", "**", "a"}]}], 
+  "+", 
+  RowBox[{"6", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{"4", " ", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", 
+    SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"], "**", 
+   SuperscriptBox["a", "\[Dagger]"]}]}]], "Output",
+ CellChangeTimes->{3.7377476221754*^9, 3.7377476646774*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"HoldForm", "[", 
+    RowBox[{"3", "+", 
+     RowBox[{"6", " ", 
+      RowBox[{"a", "**", "a"}]}], "+", 
+     RowBox[{"6", " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"-", 
+         SuperscriptBox["a", "\[Dagger]"]}], ")"}], "**", "a"}]}], "+", 
+     RowBox[{"12", " ", 
+      RowBox[{
+       SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+     RowBox[{"6", " ", 
+      RowBox[{
+       SuperscriptBox["a", "\[Dagger]"], "**", 
+       SuperscriptBox["a", "\[Dagger]"]}]}], "+", 
+     RowBox[{"a", "**", "a", "**", "a", "**", "a"}], "+", 
+     RowBox[{"4", " ", 
+      RowBox[{
+       SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", "a", "**", "a"}]}], 
+     "+", 
+     RowBox[{"6", " ", 
+      RowBox[{
+       SuperscriptBox["a", "\[Dagger]"], "**", "a", "**", 
+       SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+     RowBox[{"4", " ", 
+      RowBox[{
+       SuperscriptBox["a", "\[Dagger]"], "**", 
+       SuperscriptBox["a", "\[Dagger]"], "**", 
+       SuperscriptBox["a", "\[Dagger]"], "**", "a"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["a", "\[Dagger]"], "**", 
+      SuperscriptBox["a", "\[Dagger]"], "**", 
+      SuperscriptBox["a", "\[Dagger]"], "**", 
+      SuperscriptBox["a", "\[Dagger]"]}]}], "]"}], "/.", 
+   RowBox[{
+    RowBox[{"a_", "**", "b_", "**", "c_", "**", "d_"}], "\[RuleDelayed]", 
+    RowBox[{"a", " ", "b", " ", "c", " ", "d"}]}]}], "/.", 
+  RowBox[{
+   RowBox[{"a_", "**", "b_"}], "\[RuleDelayed]", 
+   RowBox[{"a", " ", "b"}]}]}]], "Input",
+ CellChangeTimes->{{3.7377414978294*^9, 3.7377415143254004`*^9}, 
+   3.7377415804544*^9, 3.7377447375164003`*^9, {3.7377454983384*^9, 
+   3.7377455177254*^9}, 3.7377471435634003`*^9},
+ FontSize->12],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"3", "+", 
+   RowBox[{"6", " ", 
+    RowBox[{"(", 
+     RowBox[{"a", " ", "a"}], ")"}]}], "+", 
+   RowBox[{"6", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox["a", "\[Dagger]"]}], " ", "a"}], ")"}]}], "+", 
+   RowBox[{"12", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["a", "\[Dagger]"], " ", "a"}], ")"}]}], "+", 
+   RowBox[{"6", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["a", "\[Dagger]"], " ", 
+      SuperscriptBox["a", "\[Dagger]"]}], ")"}]}], "+", 
+   RowBox[{"a", " ", "a", " ", "a", " ", "a"}], "+", 
+   RowBox[{"4", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["a", "\[Dagger]"], " ", "a", " ", "a", " ", "a"}], 
+     ")"}]}], "+", 
+   RowBox[{"6", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["a", "\[Dagger]"], " ", "a", " ", 
+      SuperscriptBox["a", "\[Dagger]"], " ", "a"}], ")"}]}], "+", 
+   RowBox[{"4", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["a", "\[Dagger]"], " ", 
+      SuperscriptBox["a", "\[Dagger]"], " ", 
+      SuperscriptBox["a", "\[Dagger]"], " ", "a"}], ")"}]}], "+", 
+   RowBox[{
+    SuperscriptBox["a", "\[Dagger]"], " ", 
+    SuperscriptBox["a", "\[Dagger]"], " ", 
+    SuperscriptBox["a", "\[Dagger]"], " ", 
+    SuperscriptBox["a", "\[Dagger]"]}]}],
+  HoldForm]], "Output",
+ CellChangeTimes->{{3.7377414999874*^9, 3.7377415157934*^9}, 
+   3.7377415818733997`*^9, 3.7377447387334003`*^9, {3.7377455026823997`*^9, 
+   3.7377455185313997`*^9}, 3.7377471448524*^9},
+ FontSize->12]
+},
+WindowSize->{1920, 998},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1190, 35, 233, "Input"],
+Cell[CellGroupData[{
+Cell[1773, 59, 2577, 67, 200, "Input"],
+Cell[4353, 128, 2532, 63, 92, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6922, 196, 1481, 40, 126, "Input"],
+Cell[8406, 238, 1896, 50, 92, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10339, 293, 1186, 36, 126, "Input"],
+Cell[11528, 331, 1325, 36, 97, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12890, 372, 1166, 35, 137, "Input"],
+Cell[14059, 409, 1158, 32, 97, "Output"]
+}, Open  ]],
+Cell[15232, 444, 174, 5, 98, "Text"],
+Cell[CellGroupData[{
+Cell[15431, 453, 1620, 45, 137, "Input"],
+Cell[17054, 500, 1217, 35, 244, "Output"],
+Cell[18274, 537, 1208, 35, 244, "Output"]
+}, Open  ]],
+Cell[19497, 575, 1752, 47, 254, InheritFromParent],
+Cell[21252, 624, 1555, 46, 176, "Output"]
+}
+]
+*)
+
+(* End of internal cache information *)
