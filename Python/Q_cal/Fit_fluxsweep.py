@@ -2,7 +2,7 @@
 """
 Created on Fri Jan 13 11:33:44 2017
 
-@author: HatLabUnderGrad2
+@author: CZ
 """
 
 # Fit_fluxsweep_data
