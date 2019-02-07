@@ -1,0 +1,396 @@
+$begin 'soln'
+	ObjectType='HfssModal'
+	SolutionType='HfssInterpolatingSweep'
+	MajorVersion=2
+	MinorVersion=0
+	Producer=''
+	Name='Sweep'
+	AdaptivePass=-1
+	$begin 'Frequencies'
+		$begin 'DataPoint'
+			Frequency=4600000000
+			DataType='None'
+			$begin 'SMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(0.0112079549954307, -0.9999371888998581)
+					c(-1.856259796778834e-009, -1.775695839384459e-011)
+				$end 'r0'
+				$begin 'r1'
+					c(-1.856259796777577e-009, -1.775695839510282e-011)
+					c(0.00792311928353806, -0.9999686115978788)
+				$end 'r1'
+			$end 'SMatrix'
+			EnergyError=0
+			IeEnergyError=0
+			$begin 'Gamma'
+				n=2
+				$begin 'r0'
+					c(-0, 96.4088710097725)
+					c(-0, 96.40887100976995)
+				$end 'r0'
+			$end 'Gamma'
+			$begin 'Zpi'
+				n=2
+				$begin 'r0'
+					c(87.57561742479456, 0)
+					c(87.55757200551348, 0)
+				$end 'r0'
+			$end 'Zpi'
+			$begin 'Zpv'
+				n=2
+				$begin 'r0'
+					c(87.14270924135872, 0)
+					c(87.13583214773453, 0)
+				$end 'r0'
+			$end 'Zpv'
+			$begin 'TerminalPMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(2, -0)
+					c(0, 0)
+				$end 'r0'
+				$begin 'r1'
+					c(0, 0)
+					c(2, -0)
+				$end 'r1'
+			$end 'TerminalPMatrix'
+		$end 'DataPoint'
+		$begin 'DataPoint'
+			Frequency=4674999999.999999
+			DataType='None'
+			$begin 'SMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(-0.1159688853070678, -0.9932528467820686)
+					c(-3.025849761034311e-009, 3.586423534770953e-010)
+				$end 'r0'
+				$begin 'r1'
+					c(-3.025849761031744e-009, 3.58642353475925e-010)
+					c(-0.1194353088640426, -0.9928419849083023)
+				$end 'r1'
+			$end 'SMatrix'
+			EnergyError=0
+			IeEnergyError=0
+			$begin 'Gamma'
+				n=2
+				$begin 'r0'
+					c(-0, 97.98075477622784)
+					c(-0, 97.98075477622955)
+				$end 'r0'
+			$end 'Gamma'
+			$begin 'Zpi'
+				n=2
+				$begin 'r0'
+					c(87.57561742477141, 0)
+					c(87.55757200547228, 0)
+				$end 'r0'
+			$end 'Zpi'
+			$begin 'Zpv'
+				n=2
+				$begin 'r0'
+					c(87.14270924136596, 0)
+					c(87.13583214773897, 0)
+				$end 'r0'
+			$end 'Zpv'
+			$begin 'TerminalPMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(2, -0)
+					c(0, 0)
+				$end 'r0'
+				$begin 'r1'
+					c(0, 0)
+					c(2, -0)
+				$end 'r1'
+			$end 'TerminalPMatrix'
+		$end 'DataPoint'
+		$begin 'DataPoint'
+			Frequency=4749999999.999999
+			DataType='None'
+			$begin 'SMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(-0.284899663509415, -0.9585573439978168)
+					c(-5.371652437734676e-009, 1.607108389399576e-009)
+				$end 'r0'
+				$begin 'r1'
+					c(-5.371652437734675e-009, 1.607108389399581e-009)
+					c(-0.2883592534673068, -0.9575222926594822)
+				$end 'r1'
+			$end 'SMatrix'
+			EnergyError=0
+			IeEnergyError=0
+			$begin 'Gamma'
+				n=2
+				$begin 'r0'
+					c(-0, 99.5526385426955)
+					c(-0, 99.55263854271686)
+				$end 'r0'
+			$end 'Gamma'
+			$begin 'Zpi'
+				n=2
+				$begin 'r0'
+					c(87.57561742476361, 0)
+					c(87.55757200550374, 0)
+				$end 'r0'
+			$end 'Zpi'
+			$begin 'Zpv'
+				n=2
+				$begin 'r0'
+					c(87.14270924136248, 0)
+					c(87.13583214771845, 0)
+				$end 'r0'
+			$end 'Zpv'
+			$begin 'TerminalPMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(2, 0)
+					c(0, 0)
+				$end 'r0'
+				$begin 'r1'
+					c(0, 0)
+					c(2, 0)
+				$end 'r1'
+			$end 'TerminalPMatrix'
+		$end 'DataPoint'
+		$begin 'DataPoint'
+			Frequency=4899999999.999999
+			DataType='None'
+			$begin 'SMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(-0.9117776254693001, -0.4106842603431052)
+					c(-1.54249549822501e-008, 3.424704815337217e-008)
+				$end 'r0'
+				$begin 'r1'
+					c(-1.542495498225011e-008, 3.424704815337216e-008)
+					c(-0.9117906323213181, -0.4106553820554271)
+				$end 'r1'
+			$end 'SMatrix'
+			EnergyError=0
+			IeEnergyError=0
+			$begin 'Gamma'
+				n=2
+				$begin 'r0'
+					c(-0, 102.6964060756412)
+					c(-0, 102.6964060756421)
+				$end 'r0'
+			$end 'Gamma'
+			$begin 'Zpi'
+				n=2
+				$begin 'r0'
+					c(87.57561742479209, 0)
+					c(87.55757200549724, 0)
+				$end 'r0'
+			$end 'Zpi'
+			$begin 'Zpv'
+				n=2
+				$begin 'r0'
+					c(87.14270924134783, 0)
+					c(87.1358321477195, 0)
+				$end 'r0'
+			$end 'Zpv'
+			$begin 'TerminalPMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(2, 0)
+					c(0, 0)
+				$end 'r0'
+				$begin 'r1'
+					c(0, 0)
+					c(2, 0)
+				$end 'r1'
+			$end 'TerminalPMatrix'
+		$end 'DataPoint'
+		$begin 'DataPoint'
+			Frequency=4974999999.999999
+			DataType='None'
+			$begin 'SMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(-0.2443312119591573, 0.9696918370608342)
+					c(1.181166713014338e-007, 3.094313326427828e-008)
+				$end 'r0'
+				$begin 'r1'
+					c(1.181166713014339e-007, 3.094313326427829e-008)
+					c(-0.262485042014825, 0.9649360614660676)
+				$end 'r1'
+			$end 'SMatrix'
+			EnergyError=0
+			IeEnergyError=0
+			$begin 'Gamma'
+				n=2
+				$begin 'r0'
+					c(-0, 104.268289842135)
+					c(-0, 104.2682898421138)
+				$end 'r0'
+			$end 'Gamma'
+			$begin 'Zpi'
+				n=2
+				$begin 'r0'
+					c(87.57561742477267, 0)
+					c(87.55757200550289, 0)
+				$end 'r0'
+			$end 'Zpi'
+			$begin 'Zpv'
+				n=2
+				$begin 'r0'
+					c(87.1427092413218, 0)
+					c(87.13583214771363, 0)
+				$end 'r0'
+			$end 'Zpv'
+			$begin 'TerminalPMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(2, 0)
+					c(0, 0)
+				$end 'r0'
+				$begin 'r1'
+					c(0, 0)
+					c(2, 0)
+				$end 'r1'
+			$end 'TerminalPMatrix'
+		$end 'DataPoint'
+		$begin 'DataPoint'
+			Frequency=5050000000
+			DataType='None'
+			$begin 'SMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(0.9768008998236057, -0.2141494854132977)
+					c(-1.19549000809956e-008, -5.614033535667184e-008)
+				$end 'r0'
+				$begin 'r1'
+					c(-1.195490008099553e-008, -5.6140335356672e-008)
+					c(0.9793036477131061, -0.202396555243596)
+				$end 'r1'
+			$end 'SMatrix'
+			EnergyError=0
+			IeEnergyError=0
+			$begin 'Gamma'
+				n=2
+				$begin 'r0'
+					c(-0, 105.8401736085536)
+					c(-0, 105.8401736085504)
+				$end 'r0'
+			$end 'Gamma'
+			$begin 'Zpi'
+				n=2
+				$begin 'r0'
+					c(87.57561742478168, 0)
+					c(87.55757200549836, 0)
+				$end 'r0'
+			$end 'Zpi'
+			$begin 'Zpv'
+				n=2
+				$begin 'r0'
+					c(87.14270924136032, 0)
+					c(87.13583214773534, 0)
+				$end 'r0'
+			$end 'Zpv'
+			$begin 'TerminalPMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(2, 0)
+					c(0, 0)
+				$end 'r0'
+				$begin 'r1'
+					c(0, 0)
+					c(2, 0)
+				$end 'r1'
+			$end 'TerminalPMatrix'
+		$end 'DataPoint'
+		$begin 'DataPoint'
+			Frequency=5199999999.999999
+			DataType='None'
+			$begin 'SMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(0.332796209666445, -0.9429987713831963)
+					c(-1.014353852956391e-008, -3.584934601499804e-009)
+				$end 'r0'
+				$begin 'r1'
+					c(-1.014353852956393e-008, -3.584934601499804e-009)
+					c(0.3336476600992639, -0.9426978513340937)
+				$end 'r1'
+			$end 'SMatrix'
+			EnergyError=0
+			IeEnergyError=0
+			$begin 'Gamma'
+				n=2
+				$begin 'r0'
+					c(-0, 108.9839411414584)
+					c(-0, 108.9839411415224)
+				$end 'r0'
+			$end 'Gamma'
+			$begin 'Zpi'
+				n=2
+				$begin 'r0'
+					c(87.57561742476483, 0)
+					c(87.55757200550292, 0)
+				$end 'r0'
+			$end 'Zpi'
+			$begin 'Zpv'
+				n=2
+				$begin 'r0'
+					c(87.14270924137783, 0)
+					c(87.13583214769969, 0)
+				$end 'r0'
+			$end 'Zpv'
+			$begin 'TerminalPMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(2, 0)
+					c(0, 0)
+				$end 'r0'
+				$begin 'r1'
+					c(0, 0)
+					c(2, 0)
+				$end 'r1'
+			$end 'TerminalPMatrix'
+		$end 'DataPoint'
+	$end 'Frequencies'
+	$begin 'Ports'
+		Port(ModalEntryName='port_L', TerminalEntryName='port_L', PortName='port_L', Mode=1, ModeName='', TerminalName='', ParameterName='', MatrixIndex=0)
+		Port(ModalEntryName='port_R', TerminalEntryName='port_R', PortName='port_R', Mode=1, ModeName='', TerminalName='', ParameterName='', MatrixIndex=1)
+	$end 'Ports'
+	$begin 'OtherStateSpaceModels'
+	$end 'OtherStateSpaceModels'
+	HigherOrderMode=false
+	PortNames('port_L', 'port_R')
+	PortModes(1, 1)
+	ModalData=true
+	LastSolvedFreq=0
+	PreferredImpedance='Zpi'
+	$begin 'InterpolationBasis'
+		ErrorTolerance=0.002
+		MaxBasisSize=100
+		BasisSize=7
+		LowSampleFreq=4600000000
+		LowFullRangeFreq=4600000000
+		HighFullRangeFreq=5200000000
+		NumSamples=100
+		MaxSubRangeBasisSize=20
+		MinNumSubRanges=1
+		WeightedErrorForUI=1
+		LastBasisFreq=4674999999.999999
+		NumRanges=1
+		Ranges(4600000000, 5200000000, 5200000000)
+		FreqSequence(5199999999.999999, 4600000000, 4899999999.999999, 5050000000, 4974999999.999999, 4749999999.999999, 4674999999.999999)
+	$end 'InterpolationBasis'
+$end 'soln'

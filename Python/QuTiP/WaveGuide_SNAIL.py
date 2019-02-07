@@ -291,7 +291,7 @@ decay_op=[]#np.sqrt(kappa) * C1
 HAMIL = [HAMIL_TI, [HAMIL_COUP, pump2]]   # for time depedent hamiltonian 
 
 
-PSI0 = qt.tensor(qt.fock(NA, 0), qt.fock(NB, 0))
+PSI0 = qt.tensor(qt.fock(NA, 1), qt.fock(NB, 0))
 PSI1 = qt.tensor(PSI0, qt.fock(NC, 1))
 PSI2 = qt.tensor(PSI1, qt.fock(ND, 0))
 PSI = qt.tensor(PSI2, qt.fock(NE, 1))

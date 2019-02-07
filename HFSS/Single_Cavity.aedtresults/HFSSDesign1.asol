@@ -1,0 +1,171 @@
+$begin '$base_index$'
+  $begin 'properties'
+    all_levels=000000000000
+    time(year=000000002019, month=000000000001, day=000000000031, hour=000000000015, min=000000000032, sec=000000000028)
+    version=000000000000
+  $end 'properties'
+  $begin '$base_index$'
+    $index$(pos=000000003820, lin=000000000151, lvl=000000000000)
+  $end '$base_index$'
+$end '$base_index$'
+$begin 'SolutionBlock1'
+	ProductName=''
+	CircuitName='HFSSDesign1'
+	VersionID=67
+	PostProcess=false
+	LossLess=true
+	NextUniqueID=119
+	MoveBackwards=false
+	$begin 'VariationIDs'
+		Map(V='', ID=13)
+	$end 'VariationIDs'
+	$begin 'LinkedDataList'
+	$end 'LinkedDataList'
+	$begin 'InitialMeshes'
+		M(VID=13, Ver=67, Dir='DV13_V67.imesh/')
+	$end 'InitialMeshes'
+	MeshAssemVersionID=20
+	$begin 'NextAssemVersionID'
+		NextUniqueID=21
+		MoveBackwards=false
+	$end 'NextAssemVersionID'
+	$begin 'DefinitionMeshes'
+		$begin 'DefMeshes_Comp-1'
+			DefinitionID=-1
+			VersionID=19
+			VIDMap('', 57)
+			DM(VID=57, Ver=19, Dir='NDV57_V19.dmesh/')
+		$end 'DefMeshes_Comp-1'
+	$end 'DefinitionMeshes'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=0
+			MI(VID=13, Ver=67, Dir='DV13_MI0_V67.sd/')
+		$end 'SubData'
+	$end 'MI'
+$end 'SolutionBlock1'
+$begin 'BlockMapName'
+	FileHeader='SolutionBlock1'
+	'SolutionKey(SimSetup=10, Instance=\'SetupDefinition\', Solution=-1, VersionID=67)'='SolutionBlock7'
+	'SolutionKey(SimSetup=10, Instance=\'SolutionDefinition\', Solution=11, VersionID=67)'='SolutionBlock5'
+	'SolutionKey(SimSetup=10, Instance=\'SolutionDefinition\', Solution=12, VersionID=67)'='SolutionBlock6'
+$end 'BlockMapName'
+$begin 'SolutionBlock7'
+	SimSetupID=10
+	SimSetupName='Setup1'
+	VersionID=67
+	$begin 'EmConvergenceData'
+		EmConv(VID=13, Ver=67, EmConv='DV13_S10_V67.EMConvData')
+	$end 'EmConvergenceData'
+	IsImported=false
+	IsTable=false
+	SolveSetupID=0
+	$begin 'CurrMeshes'
+		M(VID=13, Ver=67, Dir='DV13_S10_V67.cmesh/')
+	$end 'CurrMeshes'
+	MeshAssemVersionID=2
+	$begin 'NextAssemVersionID'
+		NextUniqueID=3
+		MoveBackwards=false
+	$end 'NextAssemVersionID'
+	$begin 'ADP'
+		$begin 'SubData'
+			ID=1
+			ADP(VID=13, Ver=67, Dir='DV13_S10_ADP1_V67.sd/')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=2
+			ADP(VID=13, Ver=67, Dir='DV13_S10_ADP2_V67.sd/')
+		$end 'SubData'
+	$end 'ADP'
+	$begin 'SU'
+	$end 'SU'
+	$begin 'WaveAdapt'
+		WA(VID=13, Ver=67, A=0)
+	$end 'WaveAdapt'
+	$begin 'LastPassNumbers'
+		LP(VID=13, Ver=67, P=2)
+	$end 'LastPassNumbers'
+	$begin 'Profiles'
+		P(VID=13, Ver=67, File='DV13_S10_V67.profile')
+	$end 'Profiles'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=0
+			MI(VID=13, Ver=67, Dir='DV13_S10_MI0_V67.sd/')
+		$end 'SubData'
+	$end 'MI'
+$end 'SolutionBlock7'
+$begin 'SolutionBlock5'
+	SolutionName='AdaptivePass'
+	SolutionID=11
+	V=67
+	$begin 'States'
+		F(VID=13, Ver=67)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies()
+		SolutionType=1
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=-1
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=1
+			M(VID=13, Ver=67, File='DV13_SOL11_M1_V67.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=2
+			M(VID=13, Ver=67, File='DV13_SOL11_M2_V67.sd')
+		$end 'SubData'
+	$end 'M'
+$end 'SolutionBlock5'
+$begin 'SolutionBlock6'
+	SolutionName='LastAdaptive'
+	SolutionID=12
+	V=67
+	$begin 'States'
+		F(VID=13, Ver=67)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies()
+		SolutionType=1
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=-1
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=0
+			M(VID=13, Ver=67, File='DV13_SOL12_M0_V67.sd')
+		$end 'SubData'
+	$end 'M'
+	$begin 'Fields'
+		IDDblMap(61, 0)
+		$begin 'DataMap'
+			VID=13
+			Ver=67
+			F(DblID=61, Dir='DV13_S12_V67_F61/')
+		$end 'DataMap'
+	$end 'Fields'
+$end 'SolutionBlock6'
+$begin '$index$'
+	$begin '$index$'
+		BlockMapName(pos=1184, lin=37, lvl=0)
+		SolutionBlock5(pos=2616, lin=89, lvl=0)
+		SolutionBlock6(pos=3192, lin=118, lvl=0)
+		SolutionBlock7(pos=1567, lin=43, lvl=0)
+		SolutionBlock1(pos=370, lin=1, lvl=0)
+		$base_index$(pos=0, lin=1, lvl=0)
+		$index$(pos=3820, lin=151, lvl=0)
+	$end '$index$'
+$end '$index$'

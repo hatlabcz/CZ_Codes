@@ -1,0 +1,8 @@
+$begin 'CacheDataVersion'
+	DataVersion=-1
+$end 'CacheDataVersion'
+$begin 'VariableValues'
+	inner_pole_radius='0.3in'
+	inner_pole_height='0.5in'
+	pin_length='1in'
+$end 'VariableValues'
