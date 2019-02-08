@@ -248,7 +248,17 @@ OP =0.2 * 2.0 * np.pi
 OP2 =0.5 * 2.0 * np.pi
 pump_amp = 0.02 * 2.0 * np.pi
 
-g = 0.01 * 2.0 * np.pi
+
+gab = -0.0116453 + 0 * 1j
+gac = 0.0153293  + 0 * 1j
+gad = -0.0149243 + 0 * 1j
+gae = -0.0097438 + 0 * 1j
+gbc = -0.0128543 + 0 * 1j
+gbd = 0.0125147  + 0 * 1j
+gbe = 0.0081706  + 0 * 1j
+gcd = -0.0164737 + 0 * 1j
+gce = -0.0107554 + 0 * 1j
+gde = 0.0104712  + 0 * 1j
 
 #kappa=0.005 * 2.0 * np.pi
 #===============Parameters=============
@@ -269,17 +279,16 @@ def pump2(t, args):
 #=============Hamiltonians=============
 HAMIL_TI = OA * A_DAG * A + OB * B_DAG * B + OC * C_DAG * C + OD * D_DAG * D + OE * E_DAG * E 
             
-HAMIL_COUP = g * (  A * B_DAG  + A_DAG * B  +\
-                    A * C_DAG  + A_DAG * C  +\
-                    A * D_DAG  + A_DAG * D  +\
-                    A * E_DAG  + A_DAG * E  +\
-                    B * C_DAG  + B_DAG * C  +\
-                    B * D_DAG  + B_DAG * D  +\
-                    B * E_DAG  + B_DAG * E  +\
-                    C * D_DAG  + C_DAG * D  +\
-                    C * E_DAG  + C_DAG * E  +\
-                    D * E_DAG  + D_DAG * E   \
-                ) 
+HAMIL_COUP = gab * A * B_DAG  + gab.conjugate() * A_DAG * B  +\
+             gac * A * C_DAG  + gac.conjugate() * A_DAG * C  +\
+             gad * A * D_DAG  + gad.conjugate() * A_DAG * D  +\
+             gae * A * E_DAG  + gae.conjugate() * A_DAG * E  +\
+             gbc * B * C_DAG  + gbc.conjugate() * B_DAG * C  +\
+             gbd * B * D_DAG  + gbd.conjugate() * B_DAG * D  +\
+             gbe * B * E_DAG  + gbe.conjugate() * B_DAG * E  +\
+             gcd * C * D_DAG  + gcd.conjugate() * C_DAG * D  +\
+             gce * C * E_DAG  + gce.conjugate() * C_DAG * E  +\
+             gde * D * E_DAG  + gde.conjugate() * D_DAG * E   
                 
 
 decay_op=[]#np.sqrt(kappa) * C1
@@ -296,7 +305,7 @@ PSI1 = qt.tensor(PSI0, qt.fock(NC, 1))
 PSI2 = qt.tensor(PSI1, qt.fock(ND, 0))
 PSI = qt.tensor(PSI2, qt.fock(NE, 1))
 
-TLIST = np.linspace(0, 400, 201)
+TLIST = np.linspace(0, 1600, 201)
 
 lines=master_equation(HAMIL, PSI, TLIST,decay_op, wigner=0)
 
