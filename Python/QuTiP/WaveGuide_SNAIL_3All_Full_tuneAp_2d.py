@@ -309,14 +309,14 @@ decay_op=[]#np.sqrt(kappa) * C1
 
 HAMIL = [HAMIL_TI, [HAMIL_COUP, pump2],[HAMIL_COUP2, pump2_2],[I,pump2_3]]   # for time depedent hamiltonian 
 
+HAMIL1=0.05*ga*( A_DAG * B +  B_DAG * A +  A_DAG * C+ A * C_DAG)
 
 PSI0 = qt.tensor(qt.fock(NA, 1), qt.fock(NB, 0))
 PSI = qt.tensor(PSI0, qt.fock(NC, 0))
-
-
 TLIST = np.linspace(0, 600, 601)
 
-lines, result =master_equation(HAMIL, PSI, TLIST,decay_op, plot=1,wigner=0)
+
+lines, result =master_equation(HAMIL1, PSI, TLIST,decay_op, plot=1,wigner=0)
 
 
 

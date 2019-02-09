@@ -57,9 +57,9 @@ bell_bc1=(bc00+bc11)/np.sqrt(2)
 bell_bc2=(bc00-bc11)/np.sqrt(2)
 bell_bc3=(bc01+bc10)/np.sqrt(2)
 bell_bc4=(bc01-bc10)/np.sqrt(2)
-bell_bc5=(bc01-1j*bc10)/np.sqrt(2)
+#bell_bc5=(bc01-1j*bc10)/np.sqrt(2)
 
-C=
+#C=
 
 
 def plot_fed(result,TLIST):
@@ -67,7 +67,7 @@ def plot_fed(result,TLIST):
     fed_list2 = np.zeros(len(TLIST)) 
     fed_list3 = np.zeros(len(TLIST)) 
     fed_list4 = np.zeros(len(TLIST)) 
-    fed_list5 = np.zeros(len(TLIST)) 
+#    fed_list5 = np.zeros(len(TLIST)) 
     for i in range(len(TLIST)):
         psi_t_temp = result.states[i]
     
@@ -75,15 +75,15 @@ def plot_fed(result,TLIST):
         fed_list2[i] = qt.fidelity(psi_t_temp, bell_bc2*bell_bc2.dag())
         fed_list3[i] = qt.fidelity(psi_t_temp, bell_bc3*bell_bc3.dag())
         fed_list4[i] = qt.fidelity(psi_t_temp, bell_bc4*bell_bc4.dag())
-        fed_list5[i] = qt.fidelity(psi_t_temp, bell_bc5*bell_bc5.dag())
+#        fed_list5[i] = qt.fidelity(psi_t_temp, bell_bc5*bell_bc5.dag())
         
             
     plt.figure()
-    plt.plot(TLIST, fed_list1,"*", label='|00>+|11>')
-    plt.plot(TLIST, fed_list2,"*", label='|00>-|11>')
-    plt.plot(TLIST, fed_list3,"*", label='|01>+|10>')
-    plt.plot(TLIST, fed_list4,"*", label='|01>-<10|')
-    plt.plot(TLIST, fed_list5,"*", label='|01>-i<10|')
+    plt.plot(TLIST, fed_list1, label='|00>+|11>')
+    plt.plot(TLIST, fed_list2, label='|00>-|11>')
+    plt.plot(TLIST, fed_list3, label='|01>+|10>')
+    plt.plot(TLIST, fed_list4, label='|01>-<10|')
+#    plt.plot(TLIST, fed_list5, label='|01>-i<10|')
     
     plt.legend()
     plt.show()
