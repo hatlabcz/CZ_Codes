@@ -208,6 +208,13 @@ def master_equation(hamil_, psi0_, tlist_, decay_op, plot=1, wigner=0):
         num3_list[i] = qt.expect( C_DAG * C, psi_t_temp)
         num4_list[i] = qt.expect( D_DAG * D, psi_t_temp)
         num5_list[i] = qt.expect( E_DAG * E, psi_t_temp)
+    
+    
+#        num1_list[i] = qt.fidelity( A_DAG * A, psi_t_temp)
+#        num2_list[i] = qt.fidelity( B_DAG * B, psi_t_temp)
+#        num3_list[i] = qt.fidelity( C_DAG * C, psi_t_temp)
+#        num4_list[i] = qt.fidelity( D_DAG * D, psi_t_temp)
+#        num5_list[i] = qt.fidelity( E_DAG * E, psi_t_temp)
         if wigner:
             wa_list.append(qt.wigner(psi_t_temp.ptrace(0), xvec, xvec, g=2.0))
             wb_list.append(qt.wigner(psi_t_temp.ptrace(1), xvec, xvec, g=2.0))
@@ -334,7 +341,7 @@ TLIST = np.linspace(0, 600, 601)
 lines=master_equation(HAMIL, PSI, TLIST,decay_op, wigner=0)
 
 
-
+########################check box##############################################
 rax = plt.axes([0.05, 0.4, 0.2, 0.25])
 labels = [str(line.get_label()) for line in lines]
 visibility = [line.get_visible() for line in lines]
@@ -342,11 +349,10 @@ check = CheckButtons(rax, labels, visibility)
 def func(label):
     index = labels.index(label)
     lines[index].set_visible(not lines[index].get_visible())
-    plt.draw()
-    
+    plt.draw()    
 check.on_clicked(func)
 plt.show()
-
+###############################################################################
 
 
 

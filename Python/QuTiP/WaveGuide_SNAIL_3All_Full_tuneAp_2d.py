@@ -57,24 +57,6 @@ I0 = qt.tensor(IDEN_A,IDEN_B)
 I  = qt.tensor(I0, IDEN_C)
 I_DAG = I.dag()
 
-bc11_1 = qt.tensor(qt.fock(NA, 0), qt.fock(NB, 1))
-bc11 = qt.tensor(bc11_1, qt.fock(NC, 1))
-
-
-bc10_1 = qt.tensor(qt.fock(NA, 0), qt.fock(NB, 1))
-bc10   = qt.tensor(bc10_1, qt.fock(NC, 0))
-
-bc01_1 = qt.tensor(qt.fock(NA, 0), qt.fock(NB, 0))
-bc01 = qt.tensor(bc01_1, qt.fock(NC, 1))
-
-bc00_1 = qt.tensor(qt.fock(NA, 0), qt.fock(NB, 0))
-bc00   = qt.tensor(bc00_1, qt.fock(NC, 0))
-
-bell_bc1=(bc00+bc11)/np.sqrt(2)
-bell_bc2=(bc00-bc11)/np.sqrt(2)
-bell_bc3=(bc01+bc10)/np.sqrt(2)
-bell_bc4=(bc01-bc10)/np.sqrt(2)
-bell_bc5=(bc01-1j*bc10)/np.sqrt(2)
 
 def plot_slider(qa_list, qb_list, qc_list, length):
     fig, (ax1,ax2,ax3,ax4,ax5) = plt.subplots(1, 3, figsize=(25,5))
@@ -154,11 +136,7 @@ def master_equation(hamil_, psi0_, tlist_, decay_op, plot=1, wigner=0):
     num2_list = np.zeros(len(tlist_))    
     num3_list = np.zeros(len(tlist_))    
    
-    fed_list1 = np.zeros(len(tlist_)) 
-    fed_list2 = np.zeros(len(tlist_)) 
-    fed_list3 = np.zeros(len(tlist_)) 
-    fed_list4 = np.zeros(len(tlist_)) 
-    fed_list5 = np.zeros(len(tlist_)) 
+
     wa_list = []
     wb_list = []
     wc_list = []
@@ -168,11 +146,6 @@ def master_equation(hamil_, psi0_, tlist_, decay_op, plot=1, wigner=0):
         num1_list[i] = qt.expect( A_DAG * A, psi_t_temp)
         num2_list[i] = qt.expect( B_DAG * B, psi_t_temp)
         num3_list[i] = qt.expect( C_DAG * C, psi_t_temp)
-        fed_list1[i] = qt.fidelity(psi_t_temp, bell_bc1*bell_bc1.dag())
-        fed_list2[i] = qt.fidelity(psi_t_temp, bell_bc2*bell_bc2.dag())
-        fed_list3[i] = qt.fidelity(psi_t_temp, bell_bc3*bell_bc3.dag())
-        fed_list4[i] = qt.fidelity(psi_t_temp, bell_bc4*bell_bc4.dag())
-        fed_list5[i] = qt.fidelity(psi_t_temp, bell_bc5*bell_bc5.dag())
         if wigner:
             wa_list.append(qt.wigner(psi_t_temp.ptrace(0), xvec, xvec, g=2.0))
             wb_list.append(qt.wigner(psi_t_temp.ptrace(1), xvec, xvec, g=2.0))
@@ -182,15 +155,6 @@ def master_equation(hamil_, psi0_, tlist_, decay_op, plot=1, wigner=0):
         
     if plot:
         
-        plt.figure()
-        plt.plot(tlist_, fed_list1, label='|00>+<11|')
-        plt.plot(tlist_, fed_list2, label='|00>-<11|')
-        plt.plot(tlist_, fed_list3, label='|01>+<10|')
-        plt.plot(tlist_, fed_list4, label='|01>-<10|')
-        plt.plot(tlist_, fed_list5, label='|01>-i<10|')
-        plt.legend()
-        plt.show()
-        
         fig, ax = plt.subplots(figsize=(20,10))
         l1, = ax.plot(tlist_, num1_list, label='A')
         l2, = ax.plot(tlist_, num2_list, label='B')
@@ -199,8 +163,6 @@ def master_equation(hamil_, psi0_, tlist_, decay_op, plot=1, wigner=0):
         plt.subplots_adjust(left=0.3)
         
         lines = [l1, l2, l3]
-        
-
         
 #        plt.figure()
 #        plt.plot(tlist_, num1_list, label='A')
@@ -309,14 +271,14 @@ decay_op=[]#np.sqrt(kappa) * C1
 
 HAMIL = [HAMIL_TI, [HAMIL_COUP, pump2],[HAMIL_COUP2, pump2_2],[I,pump2_3]]   # for time depedent hamiltonian 
 
-HAMIL1=0.05*ga*( A_DAG * B +  B_DAG * A +  A_DAG * C+ A * C_DAG)
+HAMIL_RotFrame=0.05*3*ga*ga*2*( A_DAG * B +  B_DAG * A +  A_DAG * C+ A * C_DAG)
 
 PSI0 = qt.tensor(qt.fock(NA, 1), qt.fock(NB, 0))
 PSI = qt.tensor(PSI0, qt.fock(NC, 0))
-TLIST = np.linspace(0, 600, 601)
+TLIST = np.linspace(0, 800, 801)
 
 
-lines, result =master_equation(HAMIL1, PSI, TLIST,decay_op, plot=1,wigner=0)
+lines, result =master_equation(HAMIL, PSI, TLIST,decay_op, plot=1,wigner=0)
 
 
 
@@ -334,6 +296,6 @@ plt.show()
 #plt.savefig('test.png')
 
 
-filename="fed"
+filename="3mode_fed_nonRot"
 qt.qsave(result, filename)
 

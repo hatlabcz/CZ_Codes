@@ -61,6 +61,7 @@ bell_bc4=(bc01-bc10)/np.sqrt(2)
 
 #C=
 
+orot=0.2*2*np.pi
 
 def plot_fed(result,TLIST):
     fed_list1 = np.zeros(len(TLIST)) 
@@ -70,7 +71,8 @@ def plot_fed(result,TLIST):
 #    fed_list5 = np.zeros(len(TLIST)) 
     for i in range(len(TLIST)):
         psi_t_temp = result.states[i]
-    
+        bell_bc3 = (bc01+np.exp(1j*orot*TLIST[i])*bc10)/np.sqrt(2)
+        
         fed_list1[i] = qt.fidelity(psi_t_temp, bell_bc1*bell_bc1.dag())
         fed_list2[i] = qt.fidelity(psi_t_temp, bell_bc2*bell_bc2.dag())
         fed_list3[i] = qt.fidelity(psi_t_temp, bell_bc3*bell_bc3.dag())
@@ -79,17 +81,17 @@ def plot_fed(result,TLIST):
         
             
     plt.figure()
-    plt.plot(TLIST, fed_list1, label='|00>+|11>')
-    plt.plot(TLIST, fed_list2, label='|00>-|11>')
-    plt.plot(TLIST, fed_list3, label='|01>+|10>')
-    plt.plot(TLIST, fed_list4, label='|01>-<10|')
+#    plt.plot(TLIST, fed_list1, label='|00>+|11>')
+#    plt.plot(TLIST, fed_list2, label='|00>-|11>')
+    plt.plot(TLIST, fed_list3)
+#    plt.plot(TLIST, fed_list4, label='|01>-<10|')
 #    plt.plot(TLIST, fed_list5, label='|01>-i<10|')
     
-    plt.legend()
+#    plt.legend()
     plt.show()
 
 
-filename="fed"
+filename="3mode_fed_nonRot"
 result = qt.qload(filename)
 TLIST=result.times
 plot_fed(result,TLIST)
