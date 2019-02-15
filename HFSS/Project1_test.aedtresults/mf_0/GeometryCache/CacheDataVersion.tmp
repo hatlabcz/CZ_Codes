@@ -1,6 +1,0 @@
-$begin 'CacheDataVersion'
-	DataVersion=17
-$end 'CacheDataVersion'
-$begin 'VariableValues'
-	YSIZE='1mm'
-$end 'VariableValues'

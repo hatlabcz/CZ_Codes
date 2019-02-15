@@ -1,7 +1,0 @@
-$begin 'soln'
-	Name='LastAdaptive'
-	AdaptivePass=2
-	SolveMaxModes=5
-	SolveMinFreq=2952760000
-	Modes(4296993070.50671, 0, 5068909877.66235, 0, 5069026740.31627, 0, 5720088231.13697, 0, 7192508034.845, 0)
-$end 'soln'
