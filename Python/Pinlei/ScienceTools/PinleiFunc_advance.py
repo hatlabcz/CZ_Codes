@@ -13,7 +13,7 @@ directory = re.findall(r'(.*\\ScienceTools)',os.getcwd(),re.S)[0]
 import sys
 sys.path.append(directory+'\\Package')  
 #sys.path.append(idle+'\\PythonLib')
-import QubitFunc_advance as QF
+import QubitFunc_MultiMode as QF
 
 root = tk.Tk()
 root.geometry('800x600+500+300')
