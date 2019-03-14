@@ -6,7 +6,7 @@ Created on Tue Jun 06 18:23:06 2017
 """
 
 import Lib
-import h5py
+import numpy as np
 oDesktop=None
 oAnsoftApp=None
 oProject=None
@@ -14,17 +14,16 @@ oDesign=None
 oModule=None
 oEditor=None
 
-Lib.openProject(r"H:\Users\chz78\HFSS\Single_Cavity.aedt","Single_Cavity")
+Lib.openProject(r"H:\Users\chz78\HFSS\Reactangular_Cavity.aedt","Reactangular_Cavity")
 
-alp = []
-kappa = []
-frq = []
-frc = []
-
-for n in range(30):
+def inverse (x):
+    return 1.0/x
     
-    pin_height =   0.49 + n * 0.001
-    print "pin_height is", pin_height
+pin_h_list = map(inverse, np.linspace(1/0.35,1/0.8,num=31) )
+
+for n in range(len(pin_h_list)):
+    pin_height =  pin_h_list[n]
+    print "pin_height is", pin_height, "in"
     Lib.changeParameter("pin_height",str(pin_height)+"in")
     Lib.AnalyzeAll()
 

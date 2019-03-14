@@ -1,0 +1,93 @@
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 14, in <module>
+  File "Tkinter.pyc", line 1693, in wm_iconbitmap
+_tkinter.TclError: bitmap "scriptL.ico" not defined
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 14, in <module>
+  File "Tkinter.pyc", line 1693, in wm_iconbitmap
+_tkinter.TclError: bitmap "scriptL.ico" not defined
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 14, in <module>
+  File "Tkinter.pyc", line 1693, in wm_iconbitmap
+_tkinter.TclError: bitmap "E:\GoogleDrive\Python\ScienceTools\dist\scriptL.ico" not defined
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 14, in <module>
+  File "Tkinter.pyc", line 1693, in wm_iconbitmap
+_tkinter.TclError: bitmap "E:\GoogleDrive\Python\ScienceTools\dist\scriptL.ico" not defined
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 15, in <module>
+    import GUILib as GL
+  File "E:\GoogleDrive\Python\PythonLib\GUILib.py", line 11, in <module>
+    from PIL import Image, ImageTk
+ImportError: No module named PIL
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 16, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 16, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 16, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 16, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 8, in <module>
+    import tkFileDialog
+ImportError: No module named tkFileDialog
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 8, in <module>
+    import tkFileDialog
+ImportError: No module named tkFileDialog
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 17, in <module>
+    import csv
+ImportError: No module named csv
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 18, in <module>
+    import matplotlib.pyplot as plt
+ImportError: No module named matplotlib.pyplot
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 18, in <module>
+    import matplotlib.pyplot as plt
+ImportError: No module named matplotlib.pyplot
+Traceback (most recent call last):
+  File "PinleiFunc.py", line 16, in <module>
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 18, in <module>
+    import matplotlib.pyplot as plt
+ImportError: No module named matplotlib.pyplot
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyc", line 1536, in __call__
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 113, in func
+IOError: [Errno 22] invalid mode ('rb') or filename: ''
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyc", line 1536, in __call__
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 29, in cal_design
+ValueError: could not convert string to float: 
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyc", line 1536, in __call__
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 29, in cal_design
+ValueError: could not convert string to float: 
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyc", line 1536, in __call__
+  File "E:\GoogleDrive\Python\ScienceTools\Package\QubitFunc.py", line 113, in func
+IOError: [Errno 22] invalid mode ('rb') or filename: ''

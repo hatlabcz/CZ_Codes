@@ -163,7 +163,50 @@ def determineNextSweep(k):
 	c = test[1]
 	sweep = [(tef[q]+tef[q+1])/2,tef[c+1]]
 	return sweep
+ 
+ 
+def Sweep_pin_height(filename):
+	with open (filename,'rb') as csvtemp:
+		temp = csv.reader(csvtemp)
+		te = list(temp)
+		del te[0]
 	
+	pin_height = []
+	mode1 = []
+	mode2 = []
+	mode_def = []
+	
+	for i in te:
+		pin_height = pin_height + [float(i[0])]
+		mode1 = mode1 + [float(i[2])]
+		mode2 = mode2 + [float(i[4])]
+		mode_def = mode_def + [abs(float(i[2])-float(i[4]))]
+  
+	min_point = pin_height[mode_def.index(min(mode_def))]
+	return min_point	, min(mode_def)/1e6
+ 
+def plot_modes(filename):
+	with open (filename,'rb') as csvtemp:
+		temp = csv.reader(csvtemp)
+		te = list(temp)
+		del te[0]
+	
+	pin_height = []
+	mode1 = []
+	mode2 = []
+	mode_def = []
+	
+	for i in te:
+		pin_height = pin_height + [1/(float(i[0])*0.0254)]
+		mode1 = mode1 + [float(i[2])]
+		mode2 = mode2 + [float(i[4])]
+		mode_def = mode_def + [abs(float(i[2])-float(i[4]))]
+  
+	plt.figure()
+	plt.plot(pin_height,mode1)
+	plt.plot(pin_height,mode2) 
+ 
+ 
 def openProject(projectPath, projectName):
      global oDesktop, oAnsoftApp,oProject,oDesign, oEditor
      [oAnsoftApp, oDesktop] = hfss.setup_interface()     
